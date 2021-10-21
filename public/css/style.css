@@ -16,4 +16,35 @@ section {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: #353535;
+}
+footer h3 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  padding: 20px 0px 0px 20px;
+}
+footer ul {
+  padding: 0px 0px 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+footer ul li {
+  list-style: none;
+  color: #ffffff;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin-bottom: 7px;
+}
+footer ul li .fa-utensils {
+  padding: 5px;
+}
+footer ul li .fa-hands-helping {
+  padding: 2px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+footer
+{
+    background-color: #353535;
+
+    h3
+    {
+        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        padding: 20px 0px 0px 20px;
+    }
+
+    ul
+    {
+        padding: 0px 0px 25px 20px;
+        display: flex;
+        flex-direction: column;
+
+        li
+        {
+            list-style: none;
+            color: #ffffff;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            margin-bottom: 7px;
+
+            .fa-utensils
+            {
+                padding: 5px;
+            }
+
+            .fa-hands-helping
+            {
+                padding: 2px;
+            }
+        }
+    }
+}
