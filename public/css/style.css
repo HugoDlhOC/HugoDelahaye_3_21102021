@@ -32,6 +32,7 @@ footer p {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   color: #ffffff;
   padding: 20px 0px 0px 20px;
+  margin-top: 0;
 }
 footer ul {
   padding: 0px 0px 25px 20px;
@@ -169,12 +170,12 @@ body {
 .section_restaurants .gallerie_restaurants a {
   text-decoration: none;
   color: black;
+  margin-bottom: 20px;
 }
 .section_restaurants .gallerie_restaurants a article {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin-bottom: 20px;
   border-radius: 16px;
 }
 .section_restaurants .gallerie_restaurants a article img {
@@ -197,6 +198,69 @@ body {
   /*Pour gérer position coeurs*/
   bottom: 50px;
   right: 30px;
+}
+
+.section_carte {
+  background-color: #f6f6f6;
+  border-radius: 32px 32px 0px 0px;
+}
+.section_carte .titre_et_coeur {
+  padding-top: 5px;
+}
+.section_carte .titre_et_coeur h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+.section_carte h3 {
+  font-weight: normal;
+  /*
+  After crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.
+  Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
+  en utilisant la propriété CSS content. Par défaut, ce contenu est de type « en ligne ».     */
+}
+.section_carte h3::after {
+  content: "";
+  /*Sinon, aucun affichage*/
+  display: block;
+  height: 3.5px;
+  width: 47px;
+  background-color: #99e2d0;
+}
+.section_carte .liste_choix_carte {
+  display: flex;
+  flex-direction: column;
+}
+.section_carte .liste_choix_carte article {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.section_carte .liste_choix_carte article h4, .section_carte .liste_choix_carte article p {
+  margin-left: 10px;
+}
+.section_carte .liste_choix_carte article h4 {
+  margin-bottom: 10px;
+}
+.section_carte .liste_choix_carte article p {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.section_carte .liste_choix_carte article p span {
+  margin-right: 16px;
+}
+.section_carte .commande_bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_carte > * {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

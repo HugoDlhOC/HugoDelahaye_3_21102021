@@ -1,0 +1,77 @@
+.section_carte{
+    background-color: #f6f6f6;
+    border-radius: 32px 32px 0px 0px;
+
+    .titre_et_coeur{
+        padding-top: 5px;
+
+        h2{
+            font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 30px;
+        }
+    }
+
+    h3{
+        font-weight: normal;
+
+        /*
+        After crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.
+        Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
+        en utilisant la propriété CSS content. Par défaut, ce contenu est de type « en ligne ».     */
+        &::after{       //Permet de créer une barre bleu turquoise
+            content: "";    /*Sinon, aucun affichage*/
+            display: block;
+            height: 3.5px;
+            width: 47px;
+            background-color: #99e2d0;
+        }
+    }
+
+    .liste_choix_carte{
+        display: flex;
+        flex-direction: column;
+
+        article{
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+            h4, p{
+                margin-left: 10px;
+            }
+
+            h4{
+                margin-bottom: 10px;
+            }
+
+            p{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0;
+
+                span{
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+    .commande_bouton{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .btn-commander{
+            
+        }
+    }
+}
+
+.section_carte > *{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
