@@ -1,8 +1,9 @@
 footer
 {
     background-color: #353535;
+    
 
-    h3
+    p
     {
         font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
         color: #ffffff;
@@ -14,6 +15,7 @@ footer
         padding: 0px 0px 25px 20px;
         display: flex;
         flex-direction: column;
+        margin-bottom: -16px;   /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
 
         li
         {

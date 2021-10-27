@@ -1,0 +1,43 @@
+.section_fonctionnement{
+    margin-left: 16px;
+    margin-right: 16px;
+    counter-reset: fonctionnement_compteur; /*Compteur réinitialisé*/
+    ol{
+        list-style-type: none;
+        padding-left: 16px;
+        li{
+            background-color: #f6f6f6;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+            .fa-mobile-alt
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .fa-list-ul
+            {
+                margin-left: 8px;
+                margin-right: 9px;
+            }
+            
+            .fa-store{
+                margin-left: 8px;
+                margin-right: 10px;
+            }
+            &::before{
+                content: "" counter(fonctionnement_compteur);
+                counter-increment: fonctionnement_compteur; /*Incrémentation compteur*/
+                background-color: #9356dc;
+                color: white;
+                padding: 4px 9px 4px 9px;
+                border-radius: 50%;
+                margin-left: -35px;
+            }
+        }
+
+    }
+}

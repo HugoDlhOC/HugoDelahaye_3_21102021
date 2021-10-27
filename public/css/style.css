@@ -19,12 +19,16 @@ section {
 header {
   display: flex;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 0;
+  margin-bottom: 3px;
+  /*Léger débordement sur la section localisation/reservation pour l'ombre*/
 }
 
 footer {
   background-color: #353535;
 }
-footer h3 {
+footer p {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   color: #ffffff;
   padding: 20px 0px 0px 20px;
@@ -33,6 +37,8 @@ footer ul {
   padding: 0px 0px 25px 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: -16px;
+  /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
 }
 footer ul li {
   list-style: none;
@@ -45,6 +51,152 @@ footer ul li .fa-utensils {
 }
 footer ul li .fa-hands-helping {
   padding: 2px;
+}
+
+.btn {
+  border-radius: 32px;
+  padding: 16px;
+  color: white;
+  background-color: #d16adb;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+}
+
+.section_localisation_reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.section_localisation_reservation .localisation {
+  background-color: #eaeaea;
+  margin-top: 16px;
+}
+.section_localisation_reservation .localisation .icone_et_lieu .saisie {
+  outline: none;
+  border: none;
+  max-width: 110px;
+  /*Taille de la saisie*/
+  background-color: #eaeaea;
+  padding: 10px;
+}
+.section_localisation_reservation .localisation .icone_et_lieu .saisie::placeholder {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.section_localisation_reservation .reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_localisation_reservation .reservation h2 {
+  text-align: center;
+  margin-right: 45px;
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+.section_localisation_reservation .reservation p {
+  text-align: center;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.section_localisation_reservation .reservation .btn {
+  margin-bottom: 40px;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section_fonctionnement {
+  margin-left: 16px;
+  margin-right: 16px;
+  counter-reset: fonctionnement_compteur;
+  /*Compteur réinitialisé*/
+}
+.section_fonctionnement ol {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.section_fonctionnement ol li {
+  background-color: #f6f6f6;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.section_fonctionnement ol li .fa-mobile-alt {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.section_fonctionnement ol li .fa-list-ul {
+  margin-left: 8px;
+  margin-right: 9px;
+}
+.section_fonctionnement ol li .fa-store {
+  margin-left: 8px;
+  margin-right: 10px;
+}
+.section_fonctionnement ol li::before {
+  content: "" counter(fonctionnement_compteur);
+  counter-increment: fonctionnement_compteur;
+  /*Incrémentation compteur*/
+  background-color: #9356dc;
+  color: white;
+  padding: 4px 9px 4px 9px;
+  border-radius: 50%;
+  margin-left: -35px;
+}
+
+.section_restaurants {
+  background-color: #f6f6f6;
+}
+.section_restaurants h2 {
+  margin-left: 16px;
+}
+.section_restaurants .gallerie_restaurants {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.section_restaurants .gallerie_restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.section_restaurants .gallerie_restaurants a article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 16px;
+}
+.section_restaurants .gallerie_restaurants a article img {
+  height: 210px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+}
+.section_restaurants .gallerie_restaurants a article .description_restaurant {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-bottom: -10px;
+}
+.section_restaurants .gallerie_restaurants a article .description_restaurant h3, .section_restaurants .gallerie_restaurants a article .description_restaurant p {
+  margin-bottom: 0px;
+}
+.section_restaurants .gallerie_restaurants a article .description_restaurant i {
+  align-self: flex-end;
+  position: relative;
+  /*Pour gérer position coeurs*/
+  bottom: 50px;
+  right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
