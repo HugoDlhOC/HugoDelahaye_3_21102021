@@ -3,6 +3,8 @@
 
     h2{
         margin-left: 16px;
+        margin-top: 70px;
+        padding-top: 50px;
     }
 
     .gallerie_restaurants{
@@ -10,6 +12,25 @@
         flex-direction: column;
         margin-left: 16px;
         margin-right: 16px;
+
+        .new{
+            position: relative; //Ce parent doit être en position relative pour permettre une position absolute à l'enfant
+
+            &::before{  //pseudoÉlement
+                content: "Nouveau";    //Obligatoire 
+                position: absolute;
+                height: 32px;
+                width: 80px;
+                right: 16px;
+                top: 16px;
+                background-color: #99e2d0;
+                color: #008766;
+                display: grid;
+                place-items: center;    //Éléments centrés horizontalement et verticalement
+                border-radius: 2px;
+
+            }
+        }
 
         a{
             text-decoration: none;
@@ -27,6 +48,7 @@
                     object-fit: cover;
                     border-radius: 16px 16px 0px 0px;
                 }
+
 
                 .description_restaurant
                 {

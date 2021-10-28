@@ -24,6 +24,10 @@ header {
   margin-bottom: 3px;
   /*Léger débordement sur la section localisation/reservation pour l'ombre*/
 }
+header a {
+  text-decoration: none;
+  color: black;
+}
 
 footer {
   background-color: #353535;
@@ -60,7 +64,7 @@ footer ul li .fa-hands-helping {
   color: white;
   background-color: #d16adb;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border: none;
 }
 .btn span {
@@ -128,12 +132,35 @@ body {
   list-style-type: none;
   padding-left: 16px;
 }
+@media (min-width: 768px) {
+  .section_fonctionnement ol {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .section_fonctionnement ol #etape_1 {
+    margin-left: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .section_fonctionnement ol #etape_3 {
+    margin-right: 16px;
+  }
+}
 .section_fonctionnement ol li {
   background-color: #f6f6f6;
   margin-bottom: 25px;
-  padding: 20px;
+  padding: 28px;
   border-radius: 16px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .section_fonctionnement ol li {
+    margin-bottom: 0px;
+  }
 }
 .section_fonctionnement ol li .fa-mobile-alt {
   margin-left: 10px;
@@ -146,6 +173,7 @@ body {
 .section_fonctionnement ol li .fa-store {
   margin-left: 8px;
   margin-right: 10px;
+  color: #9356dc;
 }
 .section_fonctionnement ol li::before {
   content: "" counter(fonctionnement_compteur);
@@ -155,7 +183,10 @@ body {
   color: white;
   padding: 4px 9px 4px 9px;
   border-radius: 50%;
-  margin-left: -35px;
+  margin-left: -42px;
+}
+.section_fonctionnement ol #etape_3 {
+  background-color: #f5edff;
 }
 
 .section_restaurants {
@@ -163,12 +194,30 @@ body {
 }
 .section_restaurants h2 {
   margin-left: 16px;
+  margin-top: 70px;
+  padding-top: 50px;
 }
 .section_restaurants .gallerie_restaurants {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
   margin-right: 16px;
+}
+.section_restaurants .gallerie_restaurants .new {
+  position: relative;
+}
+.section_restaurants .gallerie_restaurants .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 32px;
+  width: 80px;
+  right: 16px;
+  top: 16px;
+  background-color: #99e2d0;
+  color: #008766;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
 }
 .section_restaurants .gallerie_restaurants a {
   text-decoration: none;
@@ -270,7 +319,7 @@ body {
 }
 .section_carte .carte_complete .commande_bouton .btn-commander {
   margin-top: 30px;
-  margin-bottom: 50px;
+  padding: 20px 50px 20px 50px;
 }
 
 .titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > * {
@@ -282,6 +331,7 @@ body {
 .img_presentation img {
   width: 100%;
   object-fit: cover;
+  max-height: 304px;
 }
 
 /*# sourceMappingURL=style.css.map */

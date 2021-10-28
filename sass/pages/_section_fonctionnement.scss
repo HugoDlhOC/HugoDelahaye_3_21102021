@@ -5,12 +5,36 @@
     ol{
         list-style-type: none;
         padding-left: 16px;
+
+        @media (min-width: 768px){
+            display: flex;
+            justify-content: space-around;
+            padding-left: 0px;
+            
+        }
+
+        #etape_1{
+            @media (min-width: 768px){
+                margin-left: 16px;
+            }
+        }
+
+        #etape_3{
+            @media (min-width: 768px){
+                margin-right: 16px;
+            }
+        }
         li{
             background-color: #f6f6f6;
             margin-bottom: 25px;
-            padding: 20px;
+            padding: 28px;
             border-radius: 16px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            font-weight: bold;
+
+            @media (min-width: 768px){
+                margin-bottom: 0px;
+            }
 
             .fa-mobile-alt
             {
@@ -27,6 +51,7 @@
             .fa-store{
                 margin-left: 8px;
                 margin-right: 10px;
+                color: #9356dc;
             }
             &::before{
                 content: "" counter(fonctionnement_compteur);
@@ -35,8 +60,12 @@
                 color: white;
                 padding: 4px 9px 4px 9px;
                 border-radius: 50%;
-                margin-left: -35px;
+                margin-left: -42px; //Décallage des numéros à gauche
             }
+        }
+
+        #etape_3{
+            background-color: #f5edff;
         }
 
     }
