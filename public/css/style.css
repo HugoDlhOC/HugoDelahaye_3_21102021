@@ -56,12 +56,15 @@ footer ul li .fa-hands-helping {
 
 .btn {
   border-radius: 32px;
-  padding: 16px;
+  padding: 20px 32px 20px 32px;
   color: white;
   background-color: #d16adb;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border: none;
+}
+.btn span {
+  font-size: 18px;
 }
 
 .section_localisation_reservation {
@@ -202,26 +205,33 @@ body {
 
 .section_carte {
   background-color: #f6f6f6;
+}
+.section_carte .carte_complete {
+  position: relative;
+  z-index: 1;
+  bottom: 70px;
+}
+.section_carte .carte_complete .titre_et_coeur {
+  padding-top: 10px;
+  padding-bottom: 1px;
+  background-color: white;
   border-radius: 32px 32px 0px 0px;
 }
-.section_carte .titre_et_coeur {
-  padding-top: 5px;
-}
-.section_carte .titre_et_coeur h2 {
+.section_carte .carte_complete .titre_et_coeur h2 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-weight: normal;
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
 }
-.section_carte h3 {
+.section_carte .carte_complete h3 {
   font-weight: normal;
   /*
   After crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.
   Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
   en utilisant la propriété CSS content. Par défaut, ce contenu est de type « en ligne ».     */
 }
-.section_carte h3::after {
+.section_carte .carte_complete h3::after {
   content: "";
   /*Sinon, aucun affichage*/
   display: block;
@@ -229,38 +239,49 @@ body {
   width: 47px;
   background-color: #99e2d0;
 }
-.section_carte .liste_choix_carte {
+.section_carte .carte_complete .liste_choix_carte {
   display: flex;
   flex-direction: column;
 }
-.section_carte .liste_choix_carte article {
+.section_carte .carte_complete .liste_choix_carte article {
   margin-bottom: 20px;
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-.section_carte .liste_choix_carte article h4, .section_carte .liste_choix_carte article p {
+.section_carte .carte_complete .liste_choix_carte article h4, .section_carte .carte_complete .liste_choix_carte article p {
   margin-left: 10px;
 }
-.section_carte .liste_choix_carte article h4 {
+.section_carte .carte_complete .liste_choix_carte article h4 {
   margin-bottom: 10px;
 }
-.section_carte .liste_choix_carte article p {
+.section_carte .carte_complete .liste_choix_carte article p {
   display: flex;
   justify-content: space-between;
   margin-top: 0;
 }
-.section_carte .liste_choix_carte article p span {
+.section_carte .carte_complete .liste_choix_carte article p span {
   margin-right: 16px;
 }
-.section_carte .commande_bouton {
+.section_carte .carte_complete .commande_bouton {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section_carte > * {
+.section_carte .carte_complete .commande_bouton .btn-commander {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > * {
+  /*Tous sauf l'image*/
   margin-left: 16px;
   margin-right: 16px;
+}
+
+.img_presentation img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

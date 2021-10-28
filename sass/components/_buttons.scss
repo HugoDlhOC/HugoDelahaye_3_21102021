@@ -1,9 +1,13 @@
 .btn{
     border-radius: 32px;
-    padding: 16px;
+    padding: 20px 32px 20px 32px;
     color: white;
     background-color: #d16adb;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border: none;
+
+    span{
+        font-size: 18px;
+    }
 }
