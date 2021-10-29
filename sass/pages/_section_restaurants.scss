@@ -5,6 +5,10 @@
         margin-left: 16px;
         margin-top: 70px;
         padding-top: 50px;
+        @media (min-width: 1441px){
+            max-width: 1440px;
+            margin: 70px auto 20px auto;
+        }
     }
 
     .gallerie_restaurants{
@@ -12,6 +16,20 @@
         flex-direction: column;
         margin-left: 16px;
         margin-right: 16px;
+        @media (min-width: 768px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width: 1024px){
+            justify-content: space-between;
+        }
+
+        @media (min-width: 1441px){
+            max-width: 1440px;
+            margin: auto;
+        }
 
         .new{
             position: relative; //Ce parent doit être en position relative pour permettre une position absolute à l'enfant
@@ -36,6 +54,14 @@
             text-decoration: none;
             color: black;
             margin-bottom: 20px;
+            @media (min-width: 768px){
+                flex-basis: 25%;
+                margin-right: 16px;
+                margin-bottom: 50px;
+            }
+            @media (min-width: 1024px){
+                flex-basis: 10%;
+            }
 
             article{
                 display: flex;
@@ -47,6 +73,9 @@
                     height: 210px;
                     object-fit: cover;
                     border-radius: 16px 16px 0px 0px;
+                    @media (min-width: 768px){
+                        width: 310px;
+                    }
                 }
 
 

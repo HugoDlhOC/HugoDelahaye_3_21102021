@@ -2,6 +2,11 @@
     margin-left: 16px;
     margin-right: 16px;
     counter-reset: fonctionnement_compteur; /*Compteur réinitialisé*/
+    @media (min-width: 1441px){
+        max-width: 1440px;
+        margin: auto;
+    }
+
     ol{
         list-style-type: none;
         padding-left: 16px;
@@ -34,6 +39,12 @@
 
             @media (min-width: 768px){
                 margin-bottom: 0px;
+            }
+
+            @media(max-width: 900px) and (min-width: 768px){
+                padding: 20px;
+                margin-right: 30px;
+                font-size: 14px;
             }
 
             .fa-mobile-alt

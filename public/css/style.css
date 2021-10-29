@@ -38,12 +38,22 @@ footer p {
   padding: 20px 0px 0px 20px;
   margin-top: 0;
 }
+@media (min-width: 768px) {
+  footer p {
+    text-align: center;
+  }
+}
 footer ul {
   padding: 0px 0px 25px 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: -16px;
   /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
+}
+@media (min-width: 768px) {
+  footer ul {
+    align-items: center;
+  }
 }
 footer ul li {
   list-style: none;
@@ -128,6 +138,12 @@ body {
   counter-reset: fonctionnement_compteur;
   /*Compteur réinitialisé*/
 }
+@media (min-width: 1441px) {
+  .section_fonctionnement {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 .section_fonctionnement ol {
   list-style-type: none;
   padding-left: 16px;
@@ -160,6 +176,13 @@ body {
 @media (min-width: 768px) {
   .section_fonctionnement ol li {
     margin-bottom: 0px;
+  }
+}
+@media (max-width: 900px) and (min-width: 768px) {
+  .section_fonctionnement ol li {
+    padding: 20px;
+    margin-right: 30px;
+    font-size: 14px;
   }
 }
 .section_fonctionnement ol li .fa-mobile-alt {
@@ -197,11 +220,35 @@ body {
   margin-top: 70px;
   padding-top: 50px;
 }
+@media (min-width: 1441px) {
+  .section_restaurants h2 {
+    max-width: 1440px;
+    margin: 70px auto 20px auto;
+  }
+}
 .section_restaurants .gallerie_restaurants {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
   margin-right: 16px;
+}
+@media (min-width: 768px) {
+  .section_restaurants .gallerie_restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .section_restaurants .gallerie_restaurants {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1441px) {
+  .section_restaurants .gallerie_restaurants {
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 .section_restaurants .gallerie_restaurants .new {
   position: relative;
@@ -224,6 +271,18 @@ body {
   color: black;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .section_restaurants .gallerie_restaurants a {
+    flex-basis: 25%;
+    margin-right: 16px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .section_restaurants .gallerie_restaurants a {
+    flex-basis: 10%;
+  }
+}
 .section_restaurants .gallerie_restaurants a article {
   display: flex;
   flex-direction: column;
@@ -234,6 +293,11 @@ body {
   height: 210px;
   object-fit: cover;
   border-radius: 16px 16px 0px 0px;
+}
+@media (min-width: 768px) {
+  .section_restaurants .gallerie_restaurants a article img {
+    width: 310px;
+  }
 }
 .section_restaurants .gallerie_restaurants a article .description_restaurant {
   display: flex;

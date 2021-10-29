@@ -2,13 +2,15 @@ footer
 {
     background-color: #353535;
     
-
     p
     {
         font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
         color: #ffffff;
         padding: 20px 0px 0px 20px;
         margin-top: 0;
+        @media (min-width: 768px){
+            text-align: center;;
+        }
     }
 
     ul
@@ -17,6 +19,9 @@ footer
         display: flex;
         flex-direction: column;
         margin-bottom: -16px;   /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
+        @media (min-width: 768px){
+            align-items: center;
+        }
 
         li
         {
