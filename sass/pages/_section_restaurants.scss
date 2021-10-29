@@ -54,6 +54,11 @@
             text-decoration: none;
             color: black;
             margin-bottom: 20px;
+            transition-duration: 0.3s;
+
+            &:hover{
+                transform: scale(1.10);
+            }
             @media (min-width: 768px){
                 flex-basis: 25%;
                 margin-right: 16px;
