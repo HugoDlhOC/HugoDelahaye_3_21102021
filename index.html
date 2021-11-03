@@ -8,110 +8,121 @@
     <title>ohmyfood</title>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><h1>ohmyfood</h1></a>
-    </header>
-    
-    <section class="section_localisation_reservation">
-        <div class="localisation">
-            <form class="icone_et_lieu">
-                <label><i class="fas fa-map-marker-alt"></i></label>
-                <input class="saisie" type="text" placeholder="Paris, Belleville"></input>
-            </form>
+    <div class="loader">
+        <div class="chargement">
+            <div class="balle haut"></div>
+            <div class="balle droite"></div>
+            <div class="balle bas"></div>
+            <div class="balle gauche"></div>
         </div>
 
-        <div class="reservation">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="btn">
-                <span>Explorer nos restaurants</span>
-            </button>
         </div>
-    </section>
+        <header>
+            <a href="./index.html"><h1>ohmyfood</h1></a>
+        </header>
+        
+        <section class="section_localisation_reservation">
+            <div class="localisation">
+                <form class="icone_et_lieu">
+                    <label><i class="fas fa-map-marker-alt"></i></label>
+                    <input class="saisie" type="text" placeholder="Paris, Belleville"></input>
+                </form>
+            </div>
 
-    <section class="section_fonctionnement">
-        <h2>Fonctionnement</h2>
-        <ol>
-            <li id="etape_1">
-                <i><i class="fas fa-mobile-alt"></i></i>
-                <span>Choisissez un restaurant</span>
-            </li>
-            <li id="etape_2">
-                <i class="fas fa-list-ul"></i>
-                <span>Composez votre menu</span>
-            </li>
-            <li id="etape_3">
-                <i class="fas fa-store"></i>
-                <span>Dégustez au restaurant</span>
-            </li>
-        </ol>
+            <div class="reservation">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="btn">
+                    <span>Explorer nos restaurants</span>
+                </button>
+            </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="section_fonctionnement">
+            <h2>Fonctionnement</h2>
+            <ol>
+                <li id="etape_1">
+                    <i><i class="fas fa-mobile-alt"></i></i>
+                    <span>Choisissez un restaurant</span>
+                </li>
+                <li id="etape_2">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Composez votre menu</span>
+                </li>
+                <li id="etape_3">
+                    <i class="fas fa-store"></i>
+                    <span>Dégustez au restaurant</span>
+                </li>
+            </ol>
 
-    <section class="section_restaurants">
-        <h2>Restaurants</h2>
-        <div class="gallerie_restaurants">
-            <a class="restaurant new" href="./menu_la_palette_du_gout.html">
-                <article id="restaurant_1">
-                    <img src="ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                    <div class="description_restaurant">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                        <i class="far fa-heart fa-2x"></i>
-                    </div>
-                </article>
-            </a>
+            </div>
+        </section>
 
-            <a class="restaurant new" href="./menu_la_note_enchantee.html">
-                <article id="restaurant_2">
-                    <img src="ressources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                    <div class="description_restaurant">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                        <i class="far fa-heart fa-2x"></i>
-                    </div>
-                </article>
-            </a>
+        <section class="section_restaurants">
+            <h2>Restaurants</h2>
+            <div class="gallerie_restaurants">
+                <a class="restaurant new" href="./menu_la_palette_du_gout.html" id="restaurant_la_palette_du_gout">
+                    <article id="restaurant_1">
+                        <img src="ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                        <div class="description_restaurant">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                            <i class="fas fa-heart fa-2x" id="solid_heart"></i>  <!--Version solid-->
+                            <i class="far fa-heart fa-2x" id="regular_heart"></i>  <!--Version regular-->
+                        </div>
+                    </article>
+                </a>
 
-            <a class="restaurant" href="./menu_a_la_francaise.html">
-                <article id="restaurant_3">
-                    <img src="ressources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                    <div class="description_restaurant">
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                        <i class="far fa-heart fa-2x"></i>
-                    </div>
-                </article>
-            </a>
+                <a class="restaurant new" href="./menu_la_note_enchantee.html" id="restaurant_la_note_enchantee">
+                    <article id="restaurant_2">
+                        <img src="ressources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                        <div class="description_restaurant">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                            <i class="far fa-heart fa-2x"></i>
+                        </div>
+                    </article>
+                </a>
 
-            <a class="restaurant" href="./menu_le_delice_des_sens.html">
-                <article id="restaurant_4">
-                    <img src="ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le delice des sens">
-                    <div class="description_restaurant">
-                        <h3>Le delice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                        <i class="far fa-heart fa-2x"></i>
-                    </div>
-                </article>
-            </a>
-        </div>
-    </section>
+                <a class="restaurant" href="./menu_a_la_francaise.html" id="restaurant_a_la_francaise">
+                    <article id="restaurant_3">
+                        <img src="ressources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+                        <div class="description_restaurant">
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                            <i class="far fa-heart fa-2x"></i>
+                        </div>
+                    </article>
+                </a>
 
-    <footer>
-        <p>ohmyfood</p>
-        <ul>
-            <li>
-                <i class="fas fa-utensils"></i>
-                <span>Proposer un restaurant</span>
-            </li>
-            <li>
-                <i class="fas fa-hands-helping"></i>
-                <span>Devenir partenaire</span>
-            </li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
-        </ul>
-    </footer>
+                <a class="restaurant" href="./menu_le_delice_des_sens.html" id="restaurant_le_delice_des_sens">
+                    <article id="restaurant_4">
+                        <img src="ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le delice des sens">
+                        <div class="description_restaurant">
+                            <h3>Le delice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                            <i class="far fa-heart fa-2x"></i>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>ohmyfood</p>
+            <ul>
+                <li>
+                    <i class="fas fa-utensils"></i>
+                    <span>Proposer un restaurant</span>
+                </li>
+                <li>
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Devenir partenaire</span>
+                </li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

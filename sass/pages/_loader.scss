@@ -1,0 +1,83 @@
+
+.loader {
+    position:fixed;
+    width:100%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display: contents;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+.loader .chargement{
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+
+.chargement .balle{
+    height: 25px;
+    width: 25px;
+    background: blue;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.chargement .haut{
+    background: #9356dc;
+    left: 0px;
+    top: -25px;
+    animation: an_balle_haut 0.7s infinite;
+}
+
+.chargement .droite{
+    background: #ff79da;
+    bottom: 0px;
+    right: -25px;
+    animation: an_balle_droite 0.7s infinite;
+}
+
+.chargement .bas{
+    background: #9356DC;
+    bottom: -25px;
+    right: 0px;
+    animation: an_balle_bas 0.7s infinite;
+}
+
+.chargement .gauche{
+    background: #99e2d0;
+    bottom: 0px;
+    left: -25px;
+    animation: an_balle_gauche 0.7s infinite;
+}
+
+@keyframes an_balle_haut {
+    50%, 100%{
+        top: 25px;
+    }
+}
+
+@keyframes an_balle_droite {
+    50%, 100%{
+        right: 25px;
+    }
+}
+
+@keyframes an_balle_bas {
+    50%, 100%{
+        bottom: 25px;
+    }
+}
+
+@keyframes an_balle_gauche {
+    50%, 100%{
+        left: 25px;
+    }
+}
+    

@@ -12,23 +12,66 @@
     }
 
     .gallerie_restaurants{
-        display: flex;
-        flex-direction: column;
+        //display: flex;
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        grid-template-areas: 
+            "restaurant_la_palette_du_gout"
+            "restaurant_la_note_enchantee"
+            "restaurant_a_la_francaise"
+            "restaurant_le_delice_des_sens";
+
+
+        //flex-direction: column;
         margin-left: 16px;
         margin-right: 16px;
         @media (min-width: 768px){
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+            //flex-direction: row;
+            //flex-wrap: wrap;
+            //justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+    
+            grid-template-areas: 
+                "restaurant_la_palette_du_gout          restaurant_la_note_enchantee"
+                "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
+    
         }
 
+
         @media (min-width: 1024px){
-            justify-content: space-between;
+            //justify-content: space-between;
         }
 
         @media (min-width: 1441px){
             max-width: 1440px;
             margin: auto;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+    
+            grid-template-areas: 
+                "restaurant_la_palette_du_gout          restaurant_la_note_enchantee            restaurant_a_la_francaise           restaurant_le_delice_des_sens";
+
+        }
+
+        #restaurant_la_palette_du_gout{
+            grid-area: restaurant_la_palette_du_gout;
+        }
+
+        #restaurant_la_note_enchantee{
+            grid-area: restaurant_la_note_enchantee;
+        }
+
+        #restaurant_a_la_francaise{
+            grid-area: restaurant_a_la_francaise;
+        }
+
+        #restaurant_le_delice_des_sens{
+            grid-area: restaurant_le_delice_des_sens;
         }
 
         .new{
@@ -79,10 +122,9 @@
                     object-fit: cover;
                     border-radius: 16px 16px 0px 0px;
                     @media (min-width: 768px){
-                        width: 310px;
+                        //width: 310px;
                     }
                 }
-
 
                 .description_restaurant
                 {
@@ -96,12 +138,25 @@
                     }
 
 
+                    #solid_heart{
+
+                        &:hover{
+
+                        }
+                    }
+
+                    #regular_heart{
+
+                        &:hover{
+                            
+                        }
+                    }
+
                     i{
                         align-self: flex-end;
                         position: relative; /*Pour gérer position coeurs*/
                         bottom: 50px;
                         right: 30px;
-                        
                     }
                 }
 

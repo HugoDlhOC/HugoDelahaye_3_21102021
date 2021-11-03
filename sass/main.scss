@@ -1,8 +1,10 @@
 @import "./base/typography";
+@import "./utils/variables";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./components/buttons";
 @import "./pages/section_localisation_reservation";
+@import "./pages/loader";
 @import "./layout/body";
 @import "./pages/section_fonctionnement";
 @import "./pages/section_restaurants";
