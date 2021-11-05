@@ -8,11 +8,11 @@
     bottom:0;
     background-color: rgba(255,255,255,0.7);
     z-index:9999;
-    display: contents;
-    display: flex;
+    //display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-
+    
     }
 
 .loader .chargement{
@@ -30,54 +30,60 @@
 }
 
 .chargement .haut{
-    background: #9356dc;
+    background: $couleur-primaire;
     left: 0px;
     top: -25px;
-    animation: an_balle_haut 0.7s infinite;
+    animation: anim_balle_haut 0.7s;
+    animation-iteration-count: 3;
 }
 
 .chargement .droite{
-    background: #ff79da;
+    background: $couleur-secondaire;
     bottom: 0px;
     right: -25px;
-    animation: an_balle_droite 0.7s infinite;
+    animation: anim_balle_droite 0.7s;
+    animation-iteration-count: 3;
 }
 
 .chargement .bas{
-    background: #9356DC;
+    background: $couleur-primaire;
     bottom: -25px;
     right: 0px;
-    animation: an_balle_bas 0.7s infinite;
+    animation: anim_balle_bas 0.7s;
+    animation-iteration-count: 3;
 }
 
 .chargement .gauche{
-    background: #99e2d0;
+    background: $couleur-terciaire;
     bottom: 0px;
     left: -25px;
-    animation: an_balle_gauche 0.7s infinite;
+    animation: anim_balle_gauche 0.7s;
+    animation-iteration-count: 3;
 }
 
-@keyframes an_balle_haut {
+
+@keyframes anim_balle_haut {
     50%, 100%{
         top: 25px;
     }
 }
 
-@keyframes an_balle_droite {
+@keyframes anim_balle_droite {
     50%, 100%{
         right: 25px;
     }
 }
 
-@keyframes an_balle_bas {
+@keyframes anim_balle_bas {
     50%, 100%{
         bottom: 25px;
     }
 }
 
-@keyframes an_balle_gauche {
+@keyframes anim_balle_gauche {
     50%, 100%{
         left: 25px;
     }
 }
+
     
