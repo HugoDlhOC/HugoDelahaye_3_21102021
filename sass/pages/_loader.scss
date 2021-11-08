@@ -1,18 +1,23 @@
 
 .loader {
-    position:fixed;
+    position:fixed; //Meme si l'on descend avec la molette, le loader ne disparait pas
     width:100%;
     left:0;
     right:0;
     top:0;
     bottom:0;
     background-color: rgba(255,255,255,0.7);
-    z-index:9999;
-    //display: flex;
-    display: none;
+    //background-color: white;
+    //opacity: 0,8;
+    z-index:9999;       //Le loader recouvre toute la page, il faut utiliser une position non statique, ici elle est fixée
+    display: flex;
+    //display: none;
     align-items: center;
     justify-content: center;
     
+    animation: disparition;
+    animation-duration: 2.1s;
+    animation-fill-mode: forwards;  //Une fois l'animation terminée, le loader reste à l'état qu'il est à la fin de l'animation
     }
 
 .loader .chargement{
@@ -61,6 +66,15 @@
     animation-iteration-count: 3;
 }
 
+
+@keyframes disparition {
+    from{                   //0%
+        visibility: visible;
+    }
+    to{                     //100%
+        visibility: hidden;
+    }
+}
 
 @keyframes anim_balle_haut {
     50%, 100%{

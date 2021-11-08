@@ -25,26 +25,6 @@
             display: flex;
             flex-direction: column;
 
-            //display: grid;
-            //grid-template-columns: 1fr;
-            //grid-template-rows: repeat(3, 1fr);
-            //grid-template-areas:
-            //    "entrees"
-            //    "plats"
-            //    "desserts";
-
-                //place-items: center;
-
-            @media (min-width: 1024px){
-                //flex-direction: row;
-                //justify-content: space-around;
-
-                //grid-template-columns: repeat(3, 1fr);
-                //grid-template-rows: 1fr;
-                //grid-template-areas: 
-                //    "entrees        plats       desserts";
-            }
-
             @media (min-width: 1441px){
                 max-width: 1440px;
                 margin: auto;
@@ -57,7 +37,7 @@
             }
 
 
-            .entrees{
+            .item_1{
                 grid-area: entrees;
                 
                 /*****ANIMATION*****/
@@ -67,30 +47,37 @@
                 animation-delay: 0s;
                 animation-iteration-count: 1;
                 animation-direction: normal;
+
+                animation-fill-mode: both;  //Permet de faire en sorte que l'élément n'apparaisse pas tant qu'il n'a pas fait l'animation
             }
 
-            .plats{
+            .item_2{
                 grid-area: plats;
 
                 /*****ANIMATION*****/
                 animation-name: anim_apparition_progressive; //Penser à rajouter webkit
                 animation-duration: 1s;
                 animation-timing-function: ease;
-                animation-delay: 1s;
+                animation-delay: 0.2s;
                 animation-iteration-count: 1;
                 animation-direction: normal;
+
+                animation-fill-mode: both;
+
             }
 
-            .desserts{
+            .item_3{
                 grid-area: desserts;
 
                 /*****ANIMATION*****/
                 animation-name: anim_apparition_progressive; //Penser à rajouter webkit
                 animation-duration: 1s;
                 animation-timing-function: ease;
-                animation-delay: 2s;
+                animation-delay: 0.4s;
                 animation-iteration-count: 1;
                 animation-direction: normal;
+
+                animation-fill-mode: both;
             }
 
             h3{
@@ -121,19 +108,32 @@
                     border-radius: 20px;
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     //max-width: 448px;
-                    position: relative;
                     overflow: hidden;
-                    transition: 1s ease-in;
+
+                    .item_description{
+                        flex-grow: 1;   //L'élément prend toute la largeur disponible
+                    }
 
                     &:hover{
                         .check_anim{
-                            //margin-right: auto;
-                            width: auto
-                            
+                            width: 50px;
+
+                            i {
+                                /*****ANIMATION*****/
+                                animation-name: anim_rotation;
+                                animation-duration: 0.5s;
+                                animation-timing-function: ease;
+                                animation-iteration-count: 1;
+                                animation-direction: normal;
+                            }
                         }
+
+
                     }
+
+
 
                     h4, p{
                         margin-left: 10px;
@@ -153,53 +153,24 @@
 
                         span{
                             margin-right: 16px;
-                            /*****ANIMATION*****/
-                            animation-name: anim_slide-left;
-                            animation-duration: 10s;
-                            animation-timing-function: ease;
-                            animation-delay: 4s;
-                            animation-iteration-count: 1;
-                            animation-direction: normal;
-
-                            
                         }
                     }
 
                     .check_anim{
                         
                         /*ORGANISATION*/
-                        align-self: flex-end;
-                        position: absolute;
-                        height: 85px;
-                        //width: 85px;
-                        //margin-right: -85px;
                         width: 0px;
                         background-color: $couleur-terciaire;
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
 
-                        /*****ANIMATION*****/
-                        /*
-                        animation-name: anim_slide-left;
-                        animation-duration: 10s;
-                        animation-timing-function: ease;
-                        animation-delay: 4s;
-                        animation-iteration-count: 1;
-                        animation-direction: normal;*/
-                        transition: all 1s ease-in;
+                        transition: width 0.5s ease-in; //Transition suffisante
 
 
                         i{
                             color: white ;
-                            
-                            /*****ANIMATION*****/
-                            animation-name: anim_rotation;
-                            animation-duration: 10s;
-                            animation-timing-function: ease;
-                            animation-delay: 4s;
-                            animation-iteration-count: 1;
-                            animation-direction: normal;
                         }
                     }
                 }
@@ -225,12 +196,12 @@
 
 
 @keyframes anim_apparition_progressive {
-    0%{
+    from{
         opacity: 0;
         transform: translateY(10%); /*Arrive vers le haut*/
     }
 
-    100%{
+    to{
         opacity: 1;
     }
 }

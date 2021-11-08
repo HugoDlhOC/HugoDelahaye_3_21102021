@@ -147,9 +147,12 @@ footer ul li a {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 9999;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
+  animation: disparition;
+  animation-duration: 2.1s;
+  animation-fill-mode: forwards;
 }
 
 .loader .chargement {
@@ -198,6 +201,14 @@ footer ul li a {
   animation-iteration-count: 3;
 }
 
+@keyframes disparition {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 @keyframes anim_balle_haut {
   50%, 100% {
     top: 25px;
@@ -486,7 +497,7 @@ body {
     grid-template-areas: "entrees        plats       desserts";
   }
 }
-.section_carte .carte_complete .entrees_plats_desserts .entrees {
+.section_carte .carte_complete .entrees_plats_desserts .item_1 {
   grid-area: entrees;
   /*****ANIMATION*****/
   animation-name: anim_apparition_progressive;
@@ -495,26 +506,29 @@ body {
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
+  animation-fill-mode: both;
 }
-.section_carte .carte_complete .entrees_plats_desserts .plats {
+.section_carte .carte_complete .entrees_plats_desserts .item_2 {
   grid-area: plats;
   /*****ANIMATION*****/
   animation-name: anim_apparition_progressive;
   animation-duration: 1s;
   animation-timing-function: ease;
-  animation-delay: 1s;
+  animation-delay: 0.2s;
   animation-iteration-count: 1;
   animation-direction: normal;
+  animation-fill-mode: both;
 }
-.section_carte .carte_complete .entrees_plats_desserts .desserts {
+.section_carte .carte_complete .entrees_plats_desserts .item_3 {
   grid-area: desserts;
   /*****ANIMATION*****/
   animation-name: anim_apparition_progressive;
   animation-duration: 1s;
   animation-timing-function: ease;
-  animation-delay: 2s;
+  animation-delay: 0.4s;
   animation-iteration-count: 1;
   animation-direction: normal;
+  animation-fill-mode: both;
 }
 .section_carte .carte_complete .entrees_plats_desserts h3 {
   font-weight: normal;
@@ -541,13 +555,22 @@ body {
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   display: flex;
-  flex-direction: column;
-  position: relative;
+  flex-direction: row;
   overflow: hidden;
-  transition: 1s ease-in;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .item_description {
+  flex-grow: 1;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim {
-  width: auto;
+  width: 50px;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim i {
+  /*****ANIMATION*****/
+  animation-name: anim_rotation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article h4, .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
   margin-left: 10px;
@@ -565,43 +588,18 @@ body {
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p span {
   margin-right: 16px;
-  /*****ANIMATION*****/
-  animation-name: anim_slide-left;
-  animation-duration: 10s;
-  animation-timing-function: ease;
-  animation-delay: 4s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim {
   /*ORGANISATION*/
-  align-self: flex-end;
-  position: absolute;
-  height: 85px;
   width: 0px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*****ANIMATION*****/
-  /*
-  animation-name: anim_slide-left;
-  animation-duration: 10s;
-  animation-timing-function: ease;
-  animation-delay: 4s;
-  animation-iteration-count: 1;
-  animation-direction: normal;*/
-  transition: all 1s ease-in;
+  transition: width 0.5s ease-in;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim i {
   color: white;
-  /*****ANIMATION*****/
-  animation-name: anim_rotation;
-  animation-duration: 10s;
-  animation-timing-function: ease;
-  animation-delay: 4s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
 }
 .section_carte .carte_complete .commande_bouton {
   display: flex;
@@ -620,12 +618,12 @@ body {
 }
 
 @keyframes anim_apparition_progressive {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(10%);
     /*Arrive vers le haut*/
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
