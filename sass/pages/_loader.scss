@@ -7,11 +7,8 @@
     top:0;
     bottom:0;
     background-color: rgba(255,255,255,0.7);
-    //background-color: white;
-    //opacity: 0,8;
     z-index:9999;       //Le loader recouvre toute la page, il faut utiliser une position non statique, ici elle est fixée
     display: flex;
-    //display: none;
     align-items: center;
     justify-content: center;
     

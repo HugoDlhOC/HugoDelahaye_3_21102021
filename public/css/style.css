@@ -38,22 +38,12 @@ footer p {
   padding: 20px 0px 0px 20px;
   margin-top: 0;
 }
-@media (min-width: 768px) {
-  footer p {
-    text-align: center;
-  }
-}
 footer ul {
   padding: 0px 0px 25px 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: -16px;
   /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
-}
-@media (min-width: 768px) {
-  footer ul {
-    align-items: center;
-  }
 }
 footer ul li {
   list-style: none;
@@ -72,6 +62,14 @@ footer ul li a {
   color: white;
 }
 
+@media (min-width: 768px) {
+  footer p {
+    text-align: center;
+  }
+  footer ul {
+    align-items: center;
+  }
+}
 .btn {
   border-radius: 32px;
   padding: 20px 32px 20px 32px;
@@ -242,32 +240,9 @@ body {
   counter-reset: fonctionnement_compteur;
   /*Compteur réinitialisé*/
 }
-@media (min-width: 1441px) {
-  .section_fonctionnement {
-    max-width: 1440px;
-    margin: auto;
-  }
-}
 .section_fonctionnement ol {
   list-style-type: none;
   padding-left: 16px;
-}
-@media (min-width: 768px) {
-  .section_fonctionnement ol {
-    display: flex;
-    justify-content: space-around;
-    padding-left: 0px;
-  }
-}
-@media (min-width: 768px) {
-  .section_fonctionnement ol #etape_1 {
-    margin-left: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .section_fonctionnement ol #etape_3 {
-    margin-right: 16px;
-  }
 }
 .section_fonctionnement ol li {
   background-color: #f6f6f6;
@@ -276,18 +251,6 @@ body {
   border-radius: 16px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   font-weight: bold;
-}
-@media (min-width: 768px) {
-  .section_fonctionnement ol li {
-    margin-bottom: 0px;
-  }
-}
-@media (max-width: 900px) and (min-width: 768px) {
-  .section_fonctionnement ol li {
-    padding: 20px;
-    margin-right: 30px;
-    font-size: 14px;
-  }
 }
 .section_fonctionnement ol li .fa-mobile-alt {
   margin-left: 10px;
@@ -316,6 +279,32 @@ body {
   background-color: #f5edff;
 }
 
+@media (min-width: 1441px) {
+  .section_fonctionnement {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .section_fonctionnement ol {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px;
+  }
+  .section_fonctionnement ol #etape_1, .section_fonctionnement ol #etape_3 {
+    margin-left: 16px;
+  }
+  .section_fonctionnement ol li {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 900px) and (min-width: 768px) {
+  .section_fonctionnement ol li {
+    padding: 20px;
+    margin-right: 30px;
+    font-size: 14px;
+  }
+}
 .section_restaurants {
   background-color: #f6f6f6;
 }
@@ -324,12 +313,6 @@ body {
   margin-top: 70px;
   padding-top: 50px;
 }
-@media (min-width: 1441px) {
-  .section_restaurants h2 {
-    max-width: 1440px;
-    margin: 70px auto 20px auto;
-  }
-}
 .section_restaurants .gallerie_restaurants {
   display: grid;
   grid-template-columns: 1fr;
@@ -337,22 +320,6 @@ body {
   grid-template-areas: "restaurant_la_palette_du_gout" "restaurant_la_note_enchantee" "restaurant_a_la_francaise" "restaurant_le_delice_des_sens";
   margin-left: 16px;
   margin-right: 16px;
-}
-@media (min-width: 768px) {
-  .section_restaurants .gallerie_restaurants {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee" "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
-  }
-}
-@media (min-width: 1441px) {
-  .section_restaurants .gallerie_restaurants {
-    max-width: 1440px;
-    margin: auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee            restaurant_a_la_francaise           restaurant_le_delice_des_sens";
-  }
 }
 .section_restaurants .gallerie_restaurants #restaurant_la_palette_du_gout {
   grid-area: restaurant_la_palette_du_gout;
@@ -389,18 +356,6 @@ body {
 }
 .section_restaurants .gallerie_restaurants a:hover {
   transform: scale(1.05);
-}
-@media (min-width: 768px) {
-  .section_restaurants .gallerie_restaurants a {
-    flex-basis: 25%;
-    margin-right: 16px;
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 1024px) {
-  .section_restaurants .gallerie_restaurants a {
-    flex-basis: 10%;
-  }
 }
 .section_restaurants .gallerie_restaurants a article {
   display: flex;
@@ -446,6 +401,36 @@ body {
   right: 30px;
 }
 
+@media (min-width: 768px) {
+  .section_restaurants .gallerie_restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee" "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
+  }
+  .section_restaurants .gallerie_restaurants a {
+    flex-basis: 25%;
+    margin-right: 16px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .section_restaurants .gallerie_restaurants a {
+    flex-basis: 10%;
+  }
+}
+@media (min-width: 1441px) {
+  .section_restaurants h2 {
+    max-width: 1440px;
+    margin: 70px auto 20px auto;
+  }
+  .section_restaurants .gallerie_restaurants {
+    max-width: 1440px;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee            restaurant_a_la_francaise           restaurant_le_delice_des_sens";
+  }
+}
 .section_carte {
   background-color: #f6f6f6;
 }
@@ -493,19 +478,6 @@ body {
 .section_carte .carte_complete .entrees_plats_desserts {
   display: flex;
   flex-direction: column;
-}
-@media (min-width: 1441px) {
-  .section_carte .carte_complete .entrees_plats_desserts {
-    max-width: 1440px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "entrees        plats       desserts";
-  }
-  .section_carte .carte_complete .entrees_plats_desserts article {
-    max-width: 448px;
-  }
 }
 .section_carte .carte_complete .entrees_plats_desserts .item_1 {
   grid-area: entrees;
@@ -594,11 +566,6 @@ body {
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
   margin-top: 0;
-  /*
-  span{
-      margin-right: 16px;
-  }
-  */
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .prix {
   display: flex;
@@ -661,6 +628,19 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media (min-width: 1441px) {
+  .section_carte .carte_complete .entrees_plats_desserts {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "entrees        plats       desserts";
+  }
+  .section_carte .carte_complete .entrees_plats_desserts article {
+    max-width: 448px;
   }
 }
 .img_presentation img {

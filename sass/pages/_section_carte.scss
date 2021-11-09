@@ -50,20 +50,6 @@
             display: flex;
             flex-direction: column;
 
-            @media (min-width: 1441px){
-                max-width: 1440px;
-                margin: auto;
-
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr;
-                grid-template-areas: 
-                    "entrees        plats       desserts";
-                
-                article{
-                    max-width: 448px;   //Sinon, l'animation check élargie l'article
-                }
-            }
 
 
             .item_1{
@@ -128,8 +114,6 @@
             .liste_choix_carte{
                 display: flex;
                 flex-direction: column;
-                //position: relative;
-                //overflow: hidden;
 
                 article{
                     margin-bottom: 20px;
@@ -174,15 +158,7 @@
                     }
 
                     p{
-                        //display: flex;
-                        //justify-content: space-between;
                         margin-top: 0;
-
-                        /*
-                        span{
-                            margin-right: 16px;
-                        }
-                        */
                     }
 
                     .prix{
@@ -190,7 +166,6 @@
                         flex-direction: column;
                         justify-content: flex-end;
                         span{
-                            //margin-left: auto;
                             margin-right: 16px;
                             padding-bottom: 16px;
                         }
@@ -264,3 +239,26 @@
         transform: rotate(360deg);
     }
   }
+
+
+@media (min-width: 1441px){
+
+    .section_carte{
+        .carte_complete{
+            .entrees_plats_desserts{
+                max-width: 1440px;
+                margin: auto;
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+                grid-template-areas: 
+                "entrees        plats       desserts";
+    
+                article{
+                    max-width: 448px;   //Sinon, l'animation check élargie l'article
+                }
+            }
+        }
+    }
+}
