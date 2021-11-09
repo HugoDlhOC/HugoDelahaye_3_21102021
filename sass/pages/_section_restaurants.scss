@@ -90,22 +90,7 @@
                 place-items: center;    //Éléments centrés horizontalement et verticalement
                 border-radius: 2px;
             }
-            /*
-            &::before{  //pseudoÉlement
-                content: "Nouveau";    //Obligatoire 
-                position: absolute;
-                height: 32px;
-                width: 80px;
-                right: 16px;
-                top: 16px;
-                background-color: #99e2d0;
-                color: #008766;
-                display: grid;
-                place-items: center;    //Éléments centrés horizontalement et verticalement
-                border-radius: 2px;
 
-            }
-            */
         }
 
         a{

@@ -18,6 +18,31 @@
                 display: flex;
                 justify-content: space-between;
                 margin-right: 30px;
+                position: relative;
+
+                .fas{
+                    opacity: 0;
+                    transition-duration: 0.3s;
+                    
+                    position: absolute; /*Absolute, sinon les coeurs ne sont pas ensembles*/
+
+                    &:hover{
+                        opacity: 100%;
+                        background-clip: text;  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        background-image: linear-gradient(to bottom right, #ec73da, $couleur-primaire);
+                        transform: scale(1.09);
+                    }
+
+                }
+
+                i{
+                    align-self: flex-end;
+                    position: relative; /*Pour gérer position coeurs*/
+                    right: 5px;
+                    bottom: 5px;
+                }
             }
         }
 
@@ -34,6 +59,10 @@
                 grid-template-rows: 1fr;
                 grid-template-areas: 
                     "entrees        plats       desserts";
+                
+                article{
+                    max-width: 448px;   //Sinon, l'animation check élargie l'article
+                }
             }
 
 
@@ -109,11 +138,11 @@
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
                     display: flex;
                     flex-direction: row;
-                    //max-width: 448px;
                     overflow: hidden;
 
                     .item_description{
                         flex-grow: 1;   //L'élément prend toute la largeur disponible
+                        overflow: hidden;
                     }
 
                     &:hover{
@@ -133,10 +162,11 @@
 
                     }
 
-
-
                     h4, p{
                         margin-left: 10px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;    //Passage automatique a la ligne supprimé
+                        overflow: hidden;
                     }
 
                     h4{
@@ -144,15 +174,25 @@
                     }
 
                     p{
-                        display: flex;
-                        justify-content: space-between;
+                        //display: flex;
+                        //justify-content: space-between;
                         margin-top: 0;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;    //Passage automatique a la ligne supprimé
-                        overflow: hidden;
 
+                        /*
                         span{
                             margin-right: 16px;
+                        }
+                        */
+                    }
+
+                    .prix{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        span{
+                            //margin-left: auto;
+                            margin-right: 16px;
+                            padding-bottom: 16px;
                         }
                     }
 
@@ -171,6 +211,7 @@
 
                         i{
                             color: white ;
+                            
                         }
                     }
                 }
@@ -223,7 +264,3 @@
         transform: rotate(360deg);
     }
   }
-
-
-  
-  

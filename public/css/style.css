@@ -368,22 +368,6 @@ body {
 }
 .section_restaurants .gallerie_restaurants .new {
   position: relative;
-  /*
-  &::before{  //pseudoÉlement
-      content: "Nouveau";    //Obligatoire 
-      position: absolute;
-      height: 32px;
-      width: 80px;
-      right: 16px;
-      top: 16px;
-      background-color: #99e2d0;
-      color: #008766;
-      display: grid;
-      place-items: center;    //Éléments centrés horizontalement et verticalement
-      border-radius: 2px;
-
-  }
-  */
 }
 .section_restaurants .gallerie_restaurants .new span {
   position: absolute;
@@ -482,6 +466,29 @@ body {
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
+  position: relative;
+}
+.section_carte .carte_complete .titre_et_coeur h2 .fas {
+  opacity: 0;
+  transition-duration: 0.3s;
+  position: absolute;
+  /*Absolute, sinon les coeurs ne sont pas ensembles*/
+}
+.section_carte .carte_complete .titre_et_coeur h2 .fas:hover {
+  opacity: 100%;
+  background-clip: text;
+  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #ec73da, #9356DC);
+  transform: scale(1.09);
+}
+.section_carte .carte_complete .titre_et_coeur h2 i {
+  align-self: flex-end;
+  position: relative;
+  /*Pour gérer position coeurs*/
+  right: 5px;
+  bottom: 5px;
 }
 .section_carte .carte_complete .entrees_plats_desserts {
   display: flex;
@@ -495,6 +502,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "entrees        plats       desserts";
+  }
+  .section_carte .carte_complete .entrees_plats_desserts article {
+    max-width: 448px;
   }
 }
 .section_carte .carte_complete .entrees_plats_desserts .item_1 {
@@ -560,6 +570,7 @@ body {
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .item_description {
   flex-grow: 1;
+  overflow: hidden;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim {
   width: 50px;
@@ -574,20 +585,29 @@ body {
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article h4, .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
   margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article h4 {
   margin-bottom: 10px;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
-  display: flex;
-  justify-content: space-between;
   margin-top: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  /*
+  span{
+      margin-right: 16px;
+  }
+  */
 }
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p span {
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .prix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .prix span {
   margin-right: 16px;
+  padding-bottom: 16px;
 }
 .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim {
   /*ORGANISATION*/
