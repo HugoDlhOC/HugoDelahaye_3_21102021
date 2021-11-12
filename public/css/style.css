@@ -159,7 +159,7 @@ footer ul li a {
   position: relative;
 }
 
-.chargement .balle {
+.chargement .chargement__balle {
   height: 25px;
   width: 25px;
   background: blue;
@@ -275,7 +275,7 @@ body {
   border-radius: 50%;
   margin-left: -42px;
 }
-.section_fonctionnement ol #etape_3 {
+.section_fonctionnement ol #menu_fonctionnement__etape_3 {
   background-color: #f5edff;
 }
 
@@ -291,7 +291,7 @@ body {
     justify-content: space-around;
     padding-left: 0px;
   }
-  .section_fonctionnement ol #etape_1, .section_fonctionnement ol #etape_3 {
+  .section_fonctionnement ol #menu_fonctionnement__etape_1, .section_fonctionnement ol #menu_fonctionnement__etape_3 {
     margin-left: 16px;
   }
   .section_fonctionnement ol li {
@@ -368,23 +368,23 @@ body {
   object-fit: cover;
   border-radius: 16px 16px 0px 0px;
 }
-.section_restaurants .gallerie_restaurants a article .description_restaurant {
+.section_restaurants .gallerie_restaurants a article .restaurant__description {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
   margin-bottom: -10px;
   position: relative;
 }
-.section_restaurants .gallerie_restaurants a article .description_restaurant h3, .section_restaurants .gallerie_restaurants a article .description_restaurant p {
+.section_restaurants .gallerie_restaurants a article .restaurant__description h3, .section_restaurants .gallerie_restaurants a article .restaurant__description p {
   margin-bottom: 0px;
 }
-.section_restaurants .gallerie_restaurants a article .description_restaurant .fas {
+.section_restaurants .gallerie_restaurants a article .restaurant__description .fas {
   opacity: 0;
   transition-duration: 0.3s;
   position: absolute;
   /*Absolute, sinon les coeurs ne sont pas ensembles*/
 }
-.section_restaurants .gallerie_restaurants a article .description_restaurant .fas:hover {
+.section_restaurants .gallerie_restaurants a article .restaurant__description .fas:hover {
   opacity: 100%;
   background-clip: text;
   /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
@@ -393,7 +393,7 @@ body {
   background-image: linear-gradient(to bottom right, #ec73da, #9356DC);
   transform: scale(1.09);
 }
-.section_restaurants .gallerie_restaurants a article .description_restaurant i {
+.section_restaurants .gallerie_restaurants a article .restaurant__description i {
   align-self: flex-end;
   position: relative;
   /*Pour gérer position coeurs*/
