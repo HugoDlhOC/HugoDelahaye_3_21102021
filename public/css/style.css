@@ -358,7 +358,7 @@ body {
   transition-duration: 0.3s;
 }
 .section_restaurants .gallerie_restaurants a:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .section_restaurants .gallerie_restaurants a article {
   display: flex;
