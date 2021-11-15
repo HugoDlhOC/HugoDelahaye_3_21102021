@@ -1,0 +1,42 @@
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article{
+    &:hover{
+        .check_anim{
+            width: 50px;
+
+            i {
+                /*****ANIMATION*****/
+                animation: anim_rotation 0.5s ease 0s 1 normal;
+
+            }
+        }
+    }
+
+    .check_anim{
+                        
+        /*ORGANISATION*/
+        width: 0px;
+        background-color: $couleur-terciaire;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: width 0.5s ease-in; //Transition suffisante
+
+
+        i{
+            color: white ;
+            
+        }
+    }
+}
+
+
+@keyframes anim_rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }

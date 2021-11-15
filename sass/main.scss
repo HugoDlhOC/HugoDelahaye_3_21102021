@@ -1,5 +1,6 @@
 @import "./base/typography";
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./components/buttons";
@@ -10,4 +11,6 @@
 @import "./pages/section_restaurants";
 @import "./pages/section_carte";
 @import "./components/img_presentation";
-@import "./layout/header_menu"
+@import "./animations/heart";
+@import "./animations/apparition_progressive.scss";
+@import "./animations/check";

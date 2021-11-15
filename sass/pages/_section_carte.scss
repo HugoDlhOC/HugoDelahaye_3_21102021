@@ -1,5 +1,5 @@
 .section_carte{
-    background-color: #f6f6f6;
+    background-color: white;
 
     .carte_complete{
         position: relative;
@@ -20,23 +20,6 @@
                 margin-right: 30px;
                 position: relative;
 
-                .fas{
-                    opacity: 0;
-                    transition-duration: 0.3s;
-                    
-                    position: absolute; /*Absolute, sinon les coeurs ne sont pas ensembles*/
-
-                    &:hover{
-                        opacity: 100%;
-                        background-clip: text;  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
-                        -webkit-background-clip: text;
-                        color: transparent;
-                        background-image: linear-gradient(to bottom right, #ec73da, $couleur-primaire);
-                        transform: scale(1.09);
-                    }
-
-                }
-
                 i{
                     align-self: flex-end;
                     position: relative; /*Pour gérer position coeurs*/
@@ -50,49 +33,16 @@
             display: flex;
             flex-direction: column;
 
-
-
             .item_1{
                 grid-area: entrees;
-                
-                /*****ANIMATION*****/
-                animation-name: anim_apparition_progressive; //Penser à rajouter webkit
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-delay: 0s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-
-                animation-fill-mode: both;  //Permet de faire en sorte que l'élément n'apparaisse pas tant qu'il n'a pas fait l'animation
             }
 
             .item_2{
                 grid-area: plats;
-
-                /*****ANIMATION*****/
-                animation-name: anim_apparition_progressive; //Penser à rajouter webkit
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-delay: 0.2s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-
-                animation-fill-mode: both;
-
             }
 
             .item_3{
                 grid-area: desserts;
-
-                /*****ANIMATION*****/
-                animation-name: anim_apparition_progressive; //Penser à rajouter webkit
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-delay: 0.4s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-
-                animation-fill-mode: both;
             }
 
             h3{
@@ -107,7 +57,7 @@
                     display: block;
                     height: 3.5px;
                     width: 47px;
-                    background-color: #99e2d0;
+                    background-color: $couleur-terciaire;
                 }
             }
 
@@ -129,23 +79,6 @@
                         overflow: hidden;
                     }
 
-                    &:hover{
-                        .check_anim{
-                            width: 50px;
-
-                            i {
-                                /*****ANIMATION*****/
-                                animation-name: anim_rotation;
-                                animation-duration: 0.5s;
-                                animation-timing-function: ease;
-                                animation-iteration-count: 1;
-                                animation-direction: normal;
-                            }
-                        }
-
-
-                    }
-
                     h4, p{
                         margin-left: 10px;
                         text-overflow: ellipsis;
@@ -165,30 +98,12 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-end;
-                        span{
+                        strong{
                             margin-right: 16px;
                             padding-bottom: 16px;
                         }
                     }
 
-                    .check_anim{
-                        
-                        /*ORGANISATION*/
-                        width: 0px;
-                        background-color: $couleur-terciaire;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        transition: width 0.5s ease-in; //Transition suffisante
-
-
-                        i{
-                            color: white ;
-                            
-                        }
-                    }
                 }
             }
         }
@@ -209,36 +124,6 @@
     margin-left: 16px;
     margin-right: 16px;
 }
-
-
-@keyframes anim_apparition_progressive {
-    from{
-        opacity: 0;
-        transform: translateY(10%); /*Arrive vers le haut*/
-    }
-
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes anim_slide-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100px);
-    }
-  }
-
-@keyframes anim_rotation {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-  }
 
 
 @media (min-width: 1441px){

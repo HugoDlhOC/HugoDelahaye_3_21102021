@@ -8,7 +8,7 @@
         padding-left: 16px;
 
         li{
-            background-color: #f6f6f6;
+            background-color: white;
             margin-bottom: 25px;
             padding: 28px;
             border-radius: 16px;
@@ -31,12 +31,12 @@
             .fa-store{
                 margin-left: 8px;
                 margin-right: 10px;
-                color: #9356dc;
+                color: $couleur-primaire;
             }
             &::before{
                 content: "" counter(fonctionnement_compteur);
                 counter-increment: fonctionnement_compteur; /*Incrémentation compteur*/
-                background-color: #9356dc;
+                background-color: $couleur-primaire;
                 color: white;
                 padding: 4px 9px 4px 9px;
                 border-radius: 50%;

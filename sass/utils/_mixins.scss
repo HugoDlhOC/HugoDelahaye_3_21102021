@@ -1,0 +1,5 @@
+@mixin mx_anim_apparition($delai: 0s) {
+    animation: anim_apparition_progressive 1s ease $delai 1 normal;
+
+    animation-fill-mode: both;  //Permet de faire en sorte que l'élément n'apparaisse pas tant qu'il n'a pas fait l'animation
+}

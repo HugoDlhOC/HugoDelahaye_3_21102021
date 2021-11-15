@@ -1,5 +1,5 @@
 .section_restaurants{
-    background-color: #f6f6f6;
+    background-color: $couleur-grise;
 
     h2{
         margin-left: 16px;
@@ -49,7 +49,7 @@
                 width: 80px;
                 right: 16px;
                 top: 16px;
-                background-color: #99e2d0;
+                background-color: $couleur-terciaire;
                 color: #008766;
                 display: grid;
                 place-items: center;    //Éléments centrés horizontalement et verticalement
@@ -94,23 +94,6 @@
                     }
 
 
-                    .fas{
-                        opacity: 0;
-                        transition-duration: 0.3s;
-                        
-                        position: absolute; /*Absolute, sinon les coeurs ne sont pas ensembles*/
-
-                        &:hover{
-                            opacity: 100%;
-                            background-clip: text;  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
-                            -webkit-background-clip: text;
-                            color: transparent;
-                            background-image: linear-gradient(to bottom right, #ec73da, $couleur-primaire);
-                            transform: scale(1.09);
-                        }
-
-                    }
-
                     i{
                         align-self: flex-end;
                         position: relative; /*Pour gérer position coeurs*/
@@ -123,7 +106,6 @@
         }
     }
 }
-
 
 
 @media (min-width: 768px){

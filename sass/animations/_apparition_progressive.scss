@@ -1,0 +1,33 @@
+.section_carte .carte_complete .entrees_plats_desserts{
+    .item_1{
+        
+        /*****ANIMATION*****/
+        @include mx_anim_apparition();
+    }
+
+    .item_2{
+
+        /*****ANIMATION*****/
+        @include mx_anim_apparition(0.2s);  //Delai de 0.2s
+
+    }
+
+    .item_3{
+
+        /*****ANIMATION*****/
+        @include mx_anim_apparition(0.4s);  //Delai de 0.4s
+    }
+}
+
+
+
+@keyframes anim_apparition_progressive {
+    from{
+        opacity: 0;
+        transform: translateY(10%); //Arrive vers le haut
+    }
+
+    to{
+        opacity: 1;
+    }
+}
