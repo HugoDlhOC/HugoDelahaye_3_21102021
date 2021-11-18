@@ -188,6 +188,9 @@ section {
   background-color: #f5edff;
   cursor: pointer;
 }
+.section_fonctionnement ol li:hover .fas {
+  color: #9356DC;
+}
 .section_fonctionnement ol li a {
   text-decoration: none;
   color: black;
@@ -203,7 +206,6 @@ section {
 .section_fonctionnement ol li .fa-store {
   margin-left: 8px;
   margin-right: 10px;
-  color: #9356DC;
 }
 .section_fonctionnement ol li::before {
   content: "" counter(fonctionnement_compteur);
