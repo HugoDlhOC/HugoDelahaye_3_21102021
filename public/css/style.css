@@ -17,7 +17,6 @@ header {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-top: 0;
   margin-bottom: 3px;
-  /*Léger débordement sur la section localisation/reservation pour l'ombre*/
   align-items: center;
   padding-left: 60px;
   padding-right: 60px;
@@ -26,6 +25,10 @@ header a {
   text-decoration: none;
   color: black;
   margin: 0 auto;
+}
+
+body {
+  margin: 0;
 }
 
 footer {
@@ -89,6 +92,28 @@ footer ul li a {
   font-size: 18px;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: disparition 3s;
+  animation-fill-mode: forwards;
+}
+
+.img_presentation img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 304px;
+}
+
 .section_localisation_reservation {
   flex-direction: column;
   align-items: center;
@@ -104,9 +129,10 @@ footer ul li a {
   outline: none;
   border: none;
   max-width: 114px;
-  /*Taille de la saisie*/
   background-color: #eaeaea;
   padding: 16px 10px 16px 10px;
+  font-size: 16px;
+  font-weight: bold;
 }
 .section_localisation_reservation .localisation .icone_et_lieu .saisie::placeholder {
   text-align: center;
@@ -136,29 +162,6 @@ footer ul li a {
   margin-bottom: 70px;
 }
 
-.loader {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: disparition 3s;
-  animation-fill-mode: forwards;
-}
-
-body {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 section {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -167,7 +170,6 @@ section {
   margin-left: 16px;
   margin-right: 16px;
   counter-reset: fonctionnement_compteur;
-  /*Compteur réinitialisé*/
 }
 .section_fonctionnement h2 {
   padding-top: 35px;
@@ -187,9 +189,11 @@ section {
 .section_fonctionnement ol li:hover {
   background-color: #f5edff;
   cursor: pointer;
+  transition: 0.3s;
 }
 .section_fonctionnement ol li:hover .fas {
   color: #9356DC;
+  transition: 0.3s;
 }
 .section_fonctionnement ol li a {
   text-decoration: none;
@@ -210,7 +214,6 @@ section {
 .section_fonctionnement ol li::before {
   content: "" counter(fonctionnement_compteur);
   counter-increment: fonctionnement_compteur;
-  /*Incrémentation compteur*/
   background-color: #9356DC;
   color: white;
   padding: 4px 9px 4px 9px;
@@ -321,7 +324,6 @@ section {
 .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description i {
   align-self: flex-end;
   position: relative;
-  /*Pour gérer position coeurs*/
   bottom: 50px;
   right: 30px;
 }
@@ -384,7 +386,6 @@ section {
 .section_carte .carte_complete .titre_et_coeur a i {
   align-self: flex-end;
   position: absolute;
-  /*Pour gérer position coeurs*/
   right: 25px;
   bottom: 25px;
   top: 25px;
@@ -468,7 +469,6 @@ section {
 }
 
 .titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > * {
-  /*Tous sauf l'image*/
   margin-left: 16px;
   margin-right: 16px;
 }
@@ -486,12 +486,6 @@ section {
     max-width: 448px;
   }
 }
-.img_presentation img {
-  width: 100%;
-  object-fit: cover;
-  max-height: 304px;
-}
-
 .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description .fas, .section_carte .carte_complete .titre_et_coeur .fas {
   opacity: 0;
   transition-duration: 0.3s;
@@ -501,7 +495,6 @@ section {
   animation: anim_heart 0.5s ease 0s 1 normal;
   animation-fill-mode: forwards;
   background-clip: text;
-  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom right, #ec73da, #9356DC);

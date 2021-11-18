@@ -12,9 +12,11 @@
             .saisie{
                 outline: none;
                 border: none;
-                max-width: 114px;   /*Taille de la saisie*/
+                max-width: 114px;   //Taille de la saisie
                 background-color: #eaeaea;
                 padding: 16px 10px 16px 10px;
+                font-size: 16px;
+                font-weight: bold;
 
                 &::placeholder{
                     text-align: center;

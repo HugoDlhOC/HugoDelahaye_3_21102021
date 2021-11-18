@@ -4,8 +4,7 @@ header{
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 0;
-    margin-bottom: 3px; /*Léger débordement sur la section localisation/reservation pour l'ombre*/
-
+    margin-bottom: 3px; //Léger débordement sur la section localisation/reservation pour l'ombre
     align-items: center;
     padding-left: 60px;
     padding-right: 60px;
@@ -13,7 +12,6 @@ header{
     a{
         text-decoration: none;
         color: black;
-
         margin: 0 auto;
     }
 }

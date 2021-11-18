@@ -20,10 +20,8 @@
             "restaurant_a_la_francaise"
             "restaurant_le_delice_des_sens";
 
-
         margin-left: 16px;
         margin-right: 16px;
-
 
         #restaurant_la_palette_du_gout{
             grid-area: restaurant_la_palette_du_gout;
@@ -56,7 +54,6 @@
                 place-items: center;    //Éléments centrés horizontalement et verticalement
                 border-radius: 2px;
             }
-
         }
 
         .restaurant{
@@ -82,8 +79,7 @@
                     border-radius: 16px 16px 0px 0px;
                 }
 
-                .restaurant__description
-                {
+                .restaurant__description{
                     display: flex;
                     flex-direction: column;
                     padding-left: 10px;
@@ -97,12 +93,11 @@
 
                     i{
                         align-self: flex-end;
-                        position: relative; /*Pour gérer position coeurs*/
+                        position: relative; //Pour gérer position coeurs
                         bottom: 50px;
                         right: 30px;
                     }
                 }
-
             }
         }
     }

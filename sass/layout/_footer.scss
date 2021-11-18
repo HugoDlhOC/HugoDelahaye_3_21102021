@@ -1,36 +1,30 @@
-footer
-{
+footer{
     background-color: #353535;
     
-    p
-    {
+    p{
         font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
         color: #ffffff;
         padding: 20px 0px 0px 20px;
         margin-top: 0;
     }
 
-    ul
-    {
+    ul{
         padding: 0px 0px 25px 20px;
         display: flex;
         flex-direction: column;
         margin-bottom: -16px;   /*Le stylesheet créé une marge du bas de 16px à la balise ul*/
 
-        li
-        {
+        li{
             list-style: none;
             color: #ffffff;
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
             margin-bottom: 7px;
 
-            .fa-utensils
-            {
+            .fa-utensils{
                 padding: 5px;
             }
 
-            .fa-hands-helping
-            {
+            .fa-hands-helping{
                 padding: 2px;
             }
 

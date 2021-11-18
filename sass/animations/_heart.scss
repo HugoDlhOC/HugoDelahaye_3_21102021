@@ -8,7 +8,7 @@
             animation: anim_heart 0.5s ease 0s 1 normal;
 
             animation-fill-mode: forwards;
-            background-clip: text;  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
+            background-clip: text;  //La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.
             -webkit-background-clip: text;
             color: transparent;
             background-image: linear-gradient(to bottom right, #ec73da, $couleur-primaire);

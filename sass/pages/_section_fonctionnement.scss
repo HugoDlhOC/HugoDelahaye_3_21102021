@@ -1,7 +1,7 @@
 .section_fonctionnement{
     margin-left: 16px;
     margin-right: 16px;
-    counter-reset: fonctionnement_compteur; /*Compteur réinitialisé*/
+    counter-reset: fonctionnement_compteur; //Compteur réinitialisé
 
     h2{
         padding-top: 35px;
@@ -22,9 +22,11 @@
             &:hover{
                 background-color: #f5edff;
                 cursor: pointer;
+                transition: 0.3s;
 
                 .fas{
                     color: $couleur-primaire;
+                    transition: 0.3s;
                 }
             }
 
@@ -34,14 +36,12 @@
             }
 
 
-            .fa-mobile-alt
-            {
+            .fa-mobile-alt{
                 margin-left: 10px;
                 margin-right: 10px;
             }
 
-            .fa-list-ul
-            {
+            .fa-list-ul{
                 margin-left: 8px;
                 margin-right: 9px;
             }
@@ -50,9 +50,10 @@
                 margin-left: 8px;
                 margin-right: 10px;
             }
+
             &::before{
                 content: "" counter(fonctionnement_compteur);
-                counter-increment: fonctionnement_compteur; /*Incrémentation compteur*/
+                counter-increment: fonctionnement_compteur; //Incrémentation compteur
                 background-color: $couleur-primaire;
                 color: white;
                 padding: 4px 9px 4px 9px;
@@ -60,7 +61,6 @@
                 margin-left: -42px; //Décallage des numéros à gauche
             }
         }
-
     }
 }
 
@@ -77,7 +77,6 @@
             display: flex;
             justify-content: space-around;
             padding-left: 0px;
-
 
             #menu_fonctionnement__etape_1, #menu_fonctionnement__etape_3{
                 margin-left: 16px;

@@ -5,6 +5,7 @@
         position: relative;
         z-index: 1;
         bottom: 70px;
+
         .titre_et_coeur{
             padding-top: 10px;
             padding-bottom: 1px;    //Evite d'avoir une barre 
@@ -26,7 +27,7 @@
 
                 i{
                     align-self: flex-end;
-                    position: absolute; /*Pour gérer position coeurs*/
+                    position: absolute; //Pour gérer position coeurs
                     right: 25px;
                     bottom: 25px;
                     top: 25px;
@@ -115,6 +116,7 @@
                 }
             }
         }
+
         .commande_bouton{
             display: flex;
             flex-direction: column;
@@ -128,7 +130,7 @@
     }
 }
 
-.titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > *{ /*Tous sauf l'image*/
+.titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > *{ //Tout sauf l'image
     margin-left: 16px;
     margin-right: 16px;
 }

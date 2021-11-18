@@ -10,8 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     animation: disparition 3s;
-
     animation-fill-mode: forwards;  //Une fois l'animation terminée, le loader reste à l'état qu'il est à la fin de l'animation
 }
