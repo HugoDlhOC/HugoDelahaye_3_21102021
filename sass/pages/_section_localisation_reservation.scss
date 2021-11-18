@@ -1,12 +1,10 @@
 .section_localisation_reservation{
-    //display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $couleur-grise;
 
     .localisation{
         background-color: #eaeaea;
-        //margin-top: 16px;
 
         .icone_et_lieu{
             text-align: center;

@@ -8,15 +8,10 @@
   font-family: "Shrikhand";
   src: url("../../ressources/polices/Shrikhand-Regular.ttf");
 }
+/*COULEURS*/
+/*BREAKPOINTS*/
 header {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-}
-
-section {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-}
-
-header {
   display: flex;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -149,7 +144,7 @@ footer ul li a {
   top: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.7);
-  z-index: 9999;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,6 +152,422 @@ footer ul li a {
   animation-fill-mode: forwards;
 }
 
+body {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.section_fonctionnement {
+  margin-left: 16px;
+  margin-right: 16px;
+  counter-reset: fonctionnement_compteur;
+  /*Compteur réinitialisé*/
+}
+.section_fonctionnement h2 {
+  padding-top: 35px;
+}
+.section_fonctionnement ol {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.section_fonctionnement ol li {
+  background-color: white;
+  margin-bottom: 25px;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-weight: bold;
+}
+.section_fonctionnement ol li:hover {
+  background-color: #f5edff;
+  cursor: pointer;
+}
+.section_fonctionnement ol li a {
+  text-decoration: none;
+  color: black;
+}
+.section_fonctionnement ol li .fa-mobile-alt {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.section_fonctionnement ol li .fa-list-ul {
+  margin-left: 8px;
+  margin-right: 9px;
+}
+.section_fonctionnement ol li .fa-store {
+  margin-left: 8px;
+  margin-right: 10px;
+  color: #9356DC;
+}
+.section_fonctionnement ol li::before {
+  content: "" counter(fonctionnement_compteur);
+  counter-increment: fonctionnement_compteur;
+  /*Incrémentation compteur*/
+  background-color: #9356DC;
+  color: white;
+  padding: 4px 9px 4px 9px;
+  border-radius: 50%;
+  margin-left: -42px;
+}
+
+@media (min-width: 1441px) {
+  .section_fonctionnement {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .section_fonctionnement ol {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px;
+  }
+  .section_fonctionnement ol #menu_fonctionnement__etape_1, .section_fonctionnement ol #menu_fonctionnement__etape_3 {
+    margin-left: 16px;
+  }
+  .section_fonctionnement ol li {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 900px) and (min-width: 1024px) {
+  .section_fonctionnement ol li {
+    padding: 20px;
+    margin-right: 30px;
+    font-size: 14px;
+  }
+}
+.section_restaurants {
+  background-color: #f6f6f6;
+  padding-bottom: 45px;
+}
+.section_restaurants h2 {
+  margin-left: 16px;
+  margin-top: 70px;
+  padding-top: 50px;
+}
+.section_restaurants .gallerie_restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "restaurant_la_palette_du_gout" "restaurant_la_note_enchantee" "restaurant_a_la_francaise" "restaurant_le_delice_des_sens";
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.section_restaurants .gallerie_restaurants #restaurant_la_palette_du_gout {
+  grid-area: restaurant_la_palette_du_gout;
+}
+.section_restaurants .gallerie_restaurants #restaurant_la_note_enchantee {
+  grid-area: restaurant_la_note_enchantee;
+}
+.section_restaurants .gallerie_restaurants #restaurant_a_la_francaise {
+  grid-area: restaurant_a_la_francaise;
+}
+.section_restaurants .gallerie_restaurants #restaurant_le_delice_des_sens {
+  grid-area: restaurant_le_delice_des_sens;
+}
+.section_restaurants .gallerie_restaurants .new {
+  position: relative;
+}
+.section_restaurants .gallerie_restaurants .new span {
+  position: absolute;
+  height: 32px;
+  width: 80px;
+  right: 16px;
+  top: 16px;
+  background-color: #99E2D0;
+  color: #008766;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+}
+.section_restaurants .gallerie_restaurants .restaurant {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  transition-duration: 0.3s;
+}
+.section_restaurants .gallerie_restaurants .restaurant:hover {
+  transform: scale(1.02);
+}
+.section_restaurants .gallerie_restaurants .restaurant article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+}
+.section_restaurants .gallerie_restaurants .restaurant article img {
+  height: 210px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+}
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-bottom: -10px;
+  position: relative;
+}
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description h3, .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description p {
+  margin-bottom: 0px;
+}
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description i {
+  align-self: flex-end;
+  position: relative;
+  /*Pour gérer position coeurs*/
+  bottom: 50px;
+  right: 30px;
+}
+
+@media (min-width: 768px) {
+  .section_restaurants .gallerie_restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee" "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
+  }
+  .section_restaurants .gallerie_restaurants .restaurant {
+    flex-basis: 25%;
+    margin-right: 16px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .section_restaurants .gallerie_restaurants .restaurant {
+    flex-basis: 10%;
+  }
+}
+@media (min-width: 1441px) {
+  .section_restaurants h2 {
+    max-width: 1440px;
+    margin: 70px auto 20px auto;
+  }
+  .section_restaurants .gallerie_restaurants {
+    max-width: 1440px;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee            restaurant_a_la_francaise           restaurant_le_delice_des_sens";
+  }
+}
+.section_carte {
+  background-color: white;
+}
+.section_carte .carte_complete {
+  position: relative;
+  z-index: 1;
+  bottom: 70px;
+}
+.section_carte .carte_complete .titre_et_coeur {
+  padding-top: 10px;
+  padding-bottom: 1px;
+  background-color: white;
+  border-radius: 32px 32px 0px 0px;
+  display: flex;
+  position: relative;
+}
+.section_carte .carte_complete .titre_et_coeur h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin-right: 30px;
+}
+.section_carte .carte_complete .titre_et_coeur a {
+  text-decoration: none;
+  color: black;
+}
+.section_carte .carte_complete .titre_et_coeur a i {
+  align-self: flex-end;
+  position: absolute;
+  /*Pour gérer position coeurs*/
+  right: 25px;
+  bottom: 25px;
+  top: 25px;
+}
+.section_carte .carte_complete .entrees_plats_desserts {
+  display: flex;
+  flex-direction: column;
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_1 {
+  grid-area: entrees;
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_2 {
+  grid-area: plats;
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_3 {
+  grid-area: desserts;
+}
+.section_carte .carte_complete .entrees_plats_desserts h3 {
+  font-weight: normal;
+  /*
+  After crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.
+  Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
+  en utilisant la propriété CSS content. Par défaut, ce contenu est de type « en ligne ».     */
+}
+.section_carte .carte_complete .entrees_plats_desserts h3::after {
+  content: "";
+  /*Sinon, aucun affichage*/
+  display: block;
+  height: 3.5px;
+  width: 47px;
+  background-color: #99E2D0;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte {
+  display: flex;
+  flex-direction: column;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a .item_description {
+  flex-grow: 1;
+  overflow: hidden;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a h4, .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a p {
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a h4 {
+  margin-bottom: 10px;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a p {
+  margin-top: 0;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a .prix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte a .prix strong {
+  margin-right: 16px;
+  padding-bottom: 16px;
+}
+.section_carte .carte_complete .commande_bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_carte .carte_complete .commande_bouton .btn-commander {
+  margin-top: 30px;
+  padding: 20px 50px 20px 50px;
+}
+
+.titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > * {
+  /*Tous sauf l'image*/
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 1441px) {
+  .section_carte .carte_complete .entrees_plats_desserts {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "entrees        plats       desserts";
+  }
+  .section_carte .carte_complete .entrees_plats_desserts article {
+    max-width: 448px;
+  }
+}
+.img_presentation img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 304px;
+}
+
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description .fas, .section_carte .carte_complete .titre_et_coeur .fas {
+  opacity: 0;
+  transition-duration: 0.3s;
+  position: absolute;
+}
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description .fas:hover, .section_carte .carte_complete .titre_et_coeur .fas:hover {
+  animation: anim_heart 0.5s ease 0s 1 normal;
+  animation-fill-mode: forwards;
+  background-clip: text;
+  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #ec73da, #9356DC);
+}
+
+@keyframes anim_heart {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 100%;
+    transform: scale(1.09);
+  }
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_1 {
+  /*****ANIMATION*****/
+  animation: anim_apparition_progressive 1s ease 0s 1 normal;
+  animation-fill-mode: both;
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_2 {
+  /*****ANIMATION*****/
+  animation: anim_apparition_progressive 1s ease 0.2s 1 normal;
+  animation-fill-mode: both;
+}
+.section_carte .carte_complete .entrees_plats_desserts .item_3 {
+  /*****ANIMATION*****/
+  animation: anim_apparition_progressive 1s ease 0.4s 1 normal;
+  animation-fill-mode: both;
+}
+
+@keyframes anim_apparition_progressive {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim {
+  width: 50px;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim i {
+  /*****ANIMATION*****/
+  animation: anim_rotation 0.5s ease 0s 1 normal;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim {
+  /*ORGANISATION*/
+  width: 0px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s ease-in;
+}
+.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim i {
+  color: white;
+}
+
+@keyframes anim_rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .loader .chargement {
   height: 25px;
   width: 25px;
@@ -229,408 +640,6 @@ footer ul li a {
 @keyframes anim_balle_gauche {
   50%, 100% {
     left: 25px;
-  }
-}
-body {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.section_fonctionnement {
-  margin-left: 16px;
-  margin-right: 16px;
-  counter-reset: fonctionnement_compteur;
-  /*Compteur réinitialisé*/
-}
-.section_fonctionnement h2 {
-  padding-top: 35px;
-}
-.section_fonctionnement ol {
-  list-style-type: none;
-  padding-left: 16px;
-}
-.section_fonctionnement ol li {
-  background-color: white;
-  margin-bottom: 25px;
-  padding: 28px;
-  border-radius: 16px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  font-weight: bold;
-}
-.section_fonctionnement ol li .fa-mobile-alt {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.section_fonctionnement ol li .fa-list-ul {
-  margin-left: 8px;
-  margin-right: 9px;
-}
-.section_fonctionnement ol li .fa-store {
-  margin-left: 8px;
-  margin-right: 10px;
-  color: #9356DC;
-}
-.section_fonctionnement ol li::before {
-  content: "" counter(fonctionnement_compteur);
-  counter-increment: fonctionnement_compteur;
-  /*Incrémentation compteur*/
-  background-color: #9356DC;
-  color: white;
-  padding: 4px 9px 4px 9px;
-  border-radius: 50%;
-  margin-left: -42px;
-}
-.section_fonctionnement ol #menu_fonctionnement__etape_3 {
-  background-color: #f5edff;
-}
-
-@media (min-width: 1441px) {
-  .section_fonctionnement {
-    max-width: 1440px;
-    margin: auto;
-  }
-}
-@media (min-width: 768px) {
-  .section_fonctionnement ol {
-    display: flex;
-    justify-content: space-around;
-    padding-left: 0px;
-  }
-  .section_fonctionnement ol #menu_fonctionnement__etape_1, .section_fonctionnement ol #menu_fonctionnement__etape_3 {
-    margin-left: 16px;
-  }
-  .section_fonctionnement ol li {
-    margin-bottom: 0px;
-  }
-}
-@media (max-width: 900px) and (min-width: 768px) {
-  .section_fonctionnement ol li {
-    padding: 20px;
-    margin-right: 30px;
-    font-size: 14px;
-  }
-}
-.section_restaurants {
-  background-color: #f6f6f6;
-  padding-bottom: 45px;
-}
-.section_restaurants h2 {
-  margin-left: 16px;
-  margin-top: 70px;
-  padding-top: 50px;
-}
-.section_restaurants .gallerie_restaurants {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "restaurant_la_palette_du_gout" "restaurant_la_note_enchantee" "restaurant_a_la_francaise" "restaurant_le_delice_des_sens";
-  margin-left: 16px;
-  margin-right: 16px;
-}
-.section_restaurants .gallerie_restaurants #restaurant_la_palette_du_gout {
-  grid-area: restaurant_la_palette_du_gout;
-}
-.section_restaurants .gallerie_restaurants #restaurant_la_note_enchantee {
-  grid-area: restaurant_la_note_enchantee;
-}
-.section_restaurants .gallerie_restaurants #restaurant_a_la_francaise {
-  grid-area: restaurant_a_la_francaise;
-}
-.section_restaurants .gallerie_restaurants #restaurant_le_delice_des_sens {
-  grid-area: restaurant_le_delice_des_sens;
-}
-.section_restaurants .gallerie_restaurants .new {
-  position: relative;
-}
-.section_restaurants .gallerie_restaurants .new span {
-  position: absolute;
-  height: 32px;
-  width: 80px;
-  right: 16px;
-  top: 16px;
-  background-color: #99E2D0;
-  color: #008766;
-  display: grid;
-  place-items: center;
-  border-radius: 2px;
-}
-.section_restaurants .gallerie_restaurants a {
-  text-decoration: none;
-  color: black;
-  margin-bottom: 20px;
-  transition-duration: 0.3s;
-}
-.section_restaurants .gallerie_restaurants a:hover {
-  transform: scale(1.02);
-}
-.section_restaurants .gallerie_restaurants a article {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 16px;
-}
-.section_restaurants .gallerie_restaurants a article img {
-  height: 210px;
-  object-fit: cover;
-  border-radius: 16px 16px 0px 0px;
-}
-.section_restaurants .gallerie_restaurants a article .restaurant__description {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  margin-bottom: -10px;
-  position: relative;
-}
-.section_restaurants .gallerie_restaurants a article .restaurant__description h3, .section_restaurants .gallerie_restaurants a article .restaurant__description p {
-  margin-bottom: 0px;
-}
-.section_restaurants .gallerie_restaurants a article .restaurant__description i {
-  align-self: flex-end;
-  position: relative;
-  /*Pour gérer position coeurs*/
-  bottom: 50px;
-  right: 30px;
-}
-
-@media (min-width: 768px) {
-  .section_restaurants .gallerie_restaurants {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee" "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
-  }
-  .section_restaurants .gallerie_restaurants a {
-    flex-basis: 25%;
-    margin-right: 16px;
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 1024px) {
-  .section_restaurants .gallerie_restaurants a {
-    flex-basis: 10%;
-  }
-}
-@media (min-width: 1441px) {
-  .section_restaurants h2 {
-    max-width: 1440px;
-    margin: 70px auto 20px auto;
-  }
-  .section_restaurants .gallerie_restaurants {
-    max-width: 1440px;
-    margin: auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "restaurant_la_palette_du_gout          restaurant_la_note_enchantee            restaurant_a_la_francaise           restaurant_le_delice_des_sens";
-  }
-}
-.section_carte {
-  background-color: white;
-}
-.section_carte .carte_complete {
-  position: relative;
-  z-index: 1;
-  bottom: 70px;
-}
-.section_carte .carte_complete .titre_et_coeur {
-  padding-top: 10px;
-  padding-bottom: 1px;
-  background-color: white;
-  border-radius: 32px 32px 0px 0px;
-}
-.section_carte .carte_complete .titre_et_coeur h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  display: flex;
-  justify-content: space-between;
-  margin-right: 30px;
-  position: relative;
-}
-.section_carte .carte_complete .titre_et_coeur h2 i {
-  align-self: flex-end;
-  position: relative;
-  /*Pour gérer position coeurs*/
-  right: 5px;
-  bottom: 5px;
-}
-.section_carte .carte_complete .entrees_plats_desserts {
-  display: flex;
-  flex-direction: column;
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_1 {
-  grid-area: entrees;
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_2 {
-  grid-area: plats;
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_3 {
-  grid-area: desserts;
-}
-.section_carte .carte_complete .entrees_plats_desserts h3 {
-  font-weight: normal;
-  /*
-  After crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.
-  Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, 
-  en utilisant la propriété CSS content. Par défaut, ce contenu est de type « en ligne ».     */
-}
-.section_carte .carte_complete .entrees_plats_desserts h3::after {
-  content: "";
-  /*Sinon, aucun affichage*/
-  display: block;
-  height: 3.5px;
-  width: 47px;
-  background-color: #99E2D0;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte {
-  display: flex;
-  flex-direction: column;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article {
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .item_description {
-  flex-grow: 1;
-  overflow: hidden;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article h4, .section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
-  margin-left: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article h4 {
-  margin-bottom: 10px;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article p {
-  margin-top: 0;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .prix {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .prix strong {
-  margin-right: 16px;
-  padding-bottom: 16px;
-}
-.section_carte .carte_complete .commande_bouton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section_carte .carte_complete .commande_bouton .btn-commander {
-  margin-top: 30px;
-  padding: 20px 50px 20px 50px;
-}
-
-.titre_et_coeur > *, .entrees > *, .plats > *, .desserts > *, .commande_bouton > * {
-  /*Tous sauf l'image*/
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-@media (min-width: 1441px) {
-  .section_carte .carte_complete .entrees_plats_desserts {
-    max-width: 1440px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "entrees        plats       desserts";
-  }
-  .section_carte .carte_complete .entrees_plats_desserts article {
-    max-width: 448px;
-  }
-}
-.img_presentation img {
-  width: 100%;
-  object-fit: cover;
-  max-height: 304px;
-}
-
-.section_restaurants .gallerie_restaurants a article .restaurant__description .fas, .section_carte .carte_complete .titre_et_coeur h2 .fas {
-  opacity: 0;
-  transition-duration: 0.3s;
-  position: absolute;
-  /*Absolute, sinon les coeurs ne sont pas ensembles*/
-}
-.section_restaurants .gallerie_restaurants a article .restaurant__description .fas:hover, .section_carte .carte_complete .titre_et_coeur h2 .fas:hover {
-  animation: anim_heart 0.5s ease 0s 1 normal;
-  animation-fill-mode: forwards;
-  background-clip: text;
-  /*La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.*/
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(to bottom right, #ec73da, #9356DC);
-}
-
-@keyframes anim_heart {
-  from {
-    opacity: 0;
-    transform: scale(1);
-  }
-  to {
-    opacity: 100%;
-    transform: scale(1.09);
-  }
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_1 {
-  /*****ANIMATION*****/
-  animation: anim_apparition_progressive 1s ease 0s 1 normal;
-  animation-fill-mode: both;
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_2 {
-  /*****ANIMATION*****/
-  animation: anim_apparition_progressive 1s ease 0.2s 1 normal;
-  animation-fill-mode: both;
-}
-.section_carte .carte_complete .entrees_plats_desserts .item_3 {
-  /*****ANIMATION*****/
-  animation: anim_apparition_progressive 1s ease 0.4s 1 normal;
-  animation-fill-mode: both;
-}
-
-@keyframes anim_apparition_progressive {
-  from {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  to {
-    opacity: 1;
-  }
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim {
-  width: 50px;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article:hover .check_anim i {
-  /*****ANIMATION*****/
-  animation: anim_rotation 0.5s ease 0s 1 normal;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim {
-  /*ORGANISATION*/
-  width: 0px;
-  background-color: #99E2D0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: width 0.5s ease-in;
-}
-.section_carte .carte_complete .entrees_plats_desserts .liste_choix_carte article .check_anim i {
-  color: white;
-}
-
-@keyframes anim_rotation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 

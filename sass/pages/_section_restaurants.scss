@@ -59,7 +59,7 @@
 
         }
 
-        a{
+        .restaurant{
             text-decoration: none;
             color: black;
             margin-bottom: 20px;
@@ -108,7 +108,6 @@
     }
 }
 
-
 @media (min-width: 768px){
     .section_restaurants{
         .gallerie_restaurants{
@@ -119,7 +118,7 @@
                 "restaurant_la_palette_du_gout          restaurant_la_note_enchantee"
                 "restaurant_a_la_francaise              restaurant_le_delice_des_sens";
 
-            a{
+            .restaurant{
                 flex-basis: 25%;
                 margin-right: 16px;
                 margin-bottom: 50px;
@@ -128,17 +127,17 @@
     }
 }
 
-@media (min-width: 1024px){
+@media (min-width: $brk_laptop){
     .section_restaurants{
         .gallerie_restaurants{
-            a{
+            .restaurant{
                 flex-basis: 10%;
             }
         }
     }
 }
 
-@media (min-width: 1441px){
+@media (min-width: $brk_laptop_large){
     .section_restaurants{
         h2{
             max-width: 1440px;

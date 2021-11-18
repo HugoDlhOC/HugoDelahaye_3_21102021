@@ -5,8 +5,9 @@
 @import "./layout/footer";
 @import "./components/buttons";
 @import "./pages/section_localisation_reservation";
-@import "./pages/loader";
+@import "./components/loading";
 @import "./layout/body";
+@import "./pages/section";
 @import "./pages/section_fonctionnement";
 @import "./pages/section_restaurants";
 @import "./pages/section_carte";
@@ -14,3 +15,4 @@
 @import "./animations/heart";
 @import "./animations/apparition_progressive.scss";
 @import "./animations/check";
+@import "./animations/loading";

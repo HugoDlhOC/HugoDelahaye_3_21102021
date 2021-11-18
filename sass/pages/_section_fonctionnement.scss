@@ -19,6 +19,16 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             font-weight: bold;
 
+            &:hover{
+                background-color: #f5edff;
+                cursor: pointer;
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
 
             .fa-mobile-alt
             {
@@ -48,21 +58,17 @@
             }
         }
 
-        #menu_fonctionnement__etape_3{
-            background-color: #f5edff;
-        }
-
     }
 }
 
-@media (min-width: 1441px){
+@media (min-width: $brk_laptop_large){
     .section_fonctionnement{
         max-width: 1440px;
         margin: auto;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: $brk_tablet){
     .section_fonctionnement{
         ol{
             display: flex;
@@ -81,7 +87,7 @@
     }
 }
 
-@media(max-width: 900px) and (min-width: 768px){
+@media(max-width: 900px) and (min-width: $brk_laptop){
     .section_fonctionnement{
         ol{
             li{

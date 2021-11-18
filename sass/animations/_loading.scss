@@ -1,22 +1,3 @@
-
-.loader {
-    position:fixed; //Meme si l'on descend avec la molette, le loader ne disparait pas
-    width:100%;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    background-color: rgba(255,255,255,0.7);
-    z-index:9999;       //Le loader recouvre toute la page, il faut utiliser une position non statique, ici elle est fixée
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    animation: disparition 3s;
-
-    animation-fill-mode: forwards;  //Une fois l'animation terminée, le loader reste à l'état qu'il est à la fin de l'animation
-    }
-
 .loader .chargement{
     height: 25px;
     width: 25px;
@@ -96,5 +77,3 @@
         left: 25px;
     }
 }
-
-    

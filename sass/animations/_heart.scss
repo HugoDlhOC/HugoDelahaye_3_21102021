@@ -1,9 +1,8 @@
-.section_restaurants .gallerie_restaurants a article .restaurant__description, .section_carte .carte_complete .titre_et_coeur h2{
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description, .section_carte .carte_complete .titre_et_coeur {
     .fas{
         opacity: 0;
         transition-duration: 0.3s;
-        
-        position: absolute; /*Absolute, sinon les coeurs ne sont pas ensembles*/
+        position: absolute; //Pour les coeurs en page d'accueil
 
         &:hover{
             animation: anim_heart 0.5s ease 0s 1 normal;
@@ -16,6 +15,7 @@
         }
 
     }
+
 }
 
 
