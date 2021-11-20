@@ -26,6 +26,9 @@ header a {
   color: black;
   margin: 0 auto;
 }
+header a h1 {
+  margin: 8px auto 8px auto;
+}
 
 body {
   margin: 0;
@@ -281,8 +284,8 @@ section {
 }
 .section_restaurants .gallerie_restaurants .new span {
   position: absolute;
-  height: 32px;
-  width: 80px;
+  height: 37px;
+  width: 85px;
   right: 16px;
   top: 16px;
   background-color: #99E2D0;
@@ -290,6 +293,7 @@ section {
   display: grid;
   place-items: center;
   border-radius: 2px;
+  font-weight: bold;
 }
 .section_restaurants .gallerie_restaurants .restaurant {
   text-decoration: none;
@@ -320,6 +324,9 @@ section {
 }
 .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description h3, .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description p {
   margin-bottom: 0px;
+}
+.section_restaurants .gallerie_restaurants .restaurant article .restaurant__description p {
+  margin-top: 8px;
 }
 .section_restaurants .gallerie_restaurants .restaurant article .restaurant__description i {
   align-self: flex-end;

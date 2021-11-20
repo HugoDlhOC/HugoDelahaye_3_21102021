@@ -44,8 +44,8 @@
 
             span{
                 position: absolute;
-                height: 32px;
-                width: 80px;
+                height: 37px;
+                width: 85px;
                 right: 16px;
                 top: 16px;
                 background-color: $couleur-terciaire;
@@ -53,6 +53,7 @@
                 display: grid;
                 place-items: center;    //Éléments centrés horizontalement et verticalement
                 border-radius: 2px;
+                font-weight: bold;
             }
         }
 
@@ -90,6 +91,9 @@
                         margin-bottom: 0px;
                     }
 
+                    p{
+                        margin-top: 8px;
+                    }
 
                     i{
                         align-self: flex-end;
