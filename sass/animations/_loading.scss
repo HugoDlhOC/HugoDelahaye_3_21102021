@@ -1,3 +1,8 @@
+.loader{
+    animation: disparition 3s;
+    animation-fill-mode: forwards;  //Une fois l'animation terminée, le loader reste à l'état qu'il est à la fin de l'animation
+}
+
 .loader .chargement{
     height: 25px;
     width: 25px;

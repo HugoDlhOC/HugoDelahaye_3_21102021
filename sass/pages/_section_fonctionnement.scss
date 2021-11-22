@@ -52,7 +52,7 @@
             }
 
             &::before{
-                content: "" counter(fonctionnement_compteur);
+                content: "" counter(fonctionnement_compteur);   //Affichage
                 counter-increment: fonctionnement_compteur; //Incrémentation compteur
                 background-color: $couleur-primaire;
                 color: white;

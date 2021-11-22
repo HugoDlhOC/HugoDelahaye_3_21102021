@@ -107,8 +107,6 @@ footer ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: disparition 3s;
-  animation-fill-mode: forwards;
 }
 
 .img_presentation img {
@@ -570,6 +568,11 @@ section {
     transform: rotate(360deg);
   }
 }
+.loader {
+  animation: disparition 3s;
+  animation-fill-mode: forwards;
+}
+
 .loader .chargement {
   height: 25px;
   width: 25px;
